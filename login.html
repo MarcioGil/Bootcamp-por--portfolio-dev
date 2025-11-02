@@ -277,6 +277,12 @@
                     <button type="submit" class="submit-btn">
                         Entrar
                     </button>
+
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <button type="button" onclick="showPasswordRecovery()" style="background: none; border: none; color: #8b5cf6; cursor: pointer; text-decoration: underline; font-size: 0.9rem;">
+                            Esqueci minha senha
+                        </button>
+                    </div>
                 </form>
             </div>
 
@@ -560,6 +566,156 @@
             link.href = URL.createObjectURL(blob);
             link.download = `cadastros-portfolio-${new Date().toISOString().split('T')[0]}.csv`;
             link.click();
+        }
+
+        // Sistema de Recuperação de Senha
+        function showPasswordRecovery() {
+            const recoveryHTML = `
+                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                    <div style="max-width: 500px; width: 100%; background: #1e293b; padding: 2rem; border-radius: 12px; border: 2px solid #8b5cf6;">
+                        <h2 style="color: #8b5cf6; margin-bottom: 1.5rem; text-align: center;">🔐 Recuperação de Acesso</h2>
+                        
+                        <div style="background: rgba(139, 92, 246, 0.1); border: 2px solid rgba(139, 92, 246, 0.3); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                            <p style="color: #cbd5e1; margin: 0; line-height: 1.6;">
+                                <strong>Problemas comuns:</strong><br>
+                                • Esqueceu a senha<br>
+                                • Email não encontrado<br>
+                                • Erro ao fazer login
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem; font-weight: 600;">Digite seu email cadastrado:</label>
+                            <input type="email" id="recoveryEmail" placeholder="seu@email.com" style="width: 100%; padding: 0.75rem; background: #0f172a; border: 1px solid #334155; border-radius: 6px; color: #cbd5e1;">
+                        </div>
+
+                        <button onclick="resetUserPassword()" style="width: 100%; background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 1rem; margin-bottom: 1rem;">
+                            🔓 Resetar Minha Senha
+                        </button>
+
+                        <button onclick="this.parentElement.parentElement.remove()" style="width: 100%; background: #334155; color: white; border: none; padding: 0.75rem; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                            Cancelar
+                        </button>
+
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border: 2px solid rgba(239, 68, 68, 0.3); border-radius: 6px;">
+                            <p style="color: #fca5a5; margin: 0; font-size: 0.85rem; line-height: 1.6;">
+                                <strong>⚠️ Atenção:</strong> O reset irá criar uma nova senha temporária. Você receberá ela na tela e poderá fazer login normalmente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', recoveryHTML);
+        }
+
+        function resetUserPassword() {
+            const email = document.getElementById('recoveryEmail').value;
+            
+            if (!email) {
+                alert('Por favor, digite seu email');
+                return;
+            }
+
+            const users = getUsers();
+            const userIndex = users.findIndex(u => u.email === email);
+
+            if (userIndex === -1) {
+                alert('❌ Email não encontrado no sistema');
+                return;
+            }
+
+            // Gerar senha temporária
+            const tempPassword = 'Temp' + Math.random().toString(36).substring(2, 8);
+            
+            // Atualizar senha do usuário
+            users[userIndex].password = hashPassword(tempPassword);
+            saveUsers(users);
+
+            // Mostrar nova senha
+            alert(`✅ Senha resetada com sucesso!\n\nSua nova senha temporária é:\n${tempPassword}\n\nGuarde em um local seguro e faça login agora.`);
+            
+            // Fechar modal
+            document.querySelector('[style*="position: fixed"]').remove();
+            
+            // Preencher email no formulário de login
+            document.getElementById('loginEmail').value = email;
+            
+            // Focar no campo de senha
+            document.getElementById('loginPassword').focus();
+        }
+
+        // Sistema de Limpeza Total (apenas admin via console)
+        function resetAllData() {
+            if (confirm('⚠️ ATENÇÃO! Isso vai apagar TODOS os cadastros. Tem certeza?')) {
+                if (confirm('Última chance! Realmente deseja apagar tudo?')) {
+                    localStorage.removeItem('ebook_users');
+                    localStorage.removeItem('current_user');
+                    alert('✅ Todos os dados foram apagados com sucesso!');
+                    location.reload();
+                }
+            }
+        }
+
+        // Limpar apenas cache do usuário atual
+        function clearCurrentUserCache() {
+            localStorage.removeItem('current_user');
+            alert('✅ Cache limpo! Faça login novamente.');
+            location.reload();
+        }
+
+        // Adicionar botão secreto de admin (Ctrl+Shift+R)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'R') {
+                showAdminPanel();
+            }
+        });
+
+        function showAdminPanel() {
+            const adminHTML = `
+                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.95); z-index: 10001; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                    <div style="max-width: 600px; width: 100%; background: #1e293b; padding: 2rem; border-radius: 12px; border: 2px solid #ef4444;">
+                        <h2 style="color: #ef4444; margin-bottom: 1.5rem; text-align: center;">⚙️ Painel Administrativo</h2>
+                        
+                        <div style="background: rgba(239, 68, 68, 0.1); border: 2px solid rgba(239, 68, 68, 0.3); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                            <p style="color: #fca5a5; margin: 0; line-height: 1.6; font-weight: bold; text-align: center;">
+                                ⚠️ ÁREA RESTRITA ⚠️<br>
+                                Apenas para manutenção do sistema
+                            </p>
+                        </div>
+
+                        <div style="display: grid; gap: 1rem;">
+                            <button onclick="clearCurrentUserCache(); this.parentElement.parentElement.parentElement.remove();" style="width: 100%; background: #3b82f6; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                                🔄 Limpar Cache do Login Atual
+                            </button>
+
+                            <button onclick="showAuditPanel(); this.parentElement.parentElement.parentElement.remove();" style="width: 100%; background: #10b981; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                                📊 Ver Painel de Auditoria
+                            </button>
+
+                            <button onclick="if(confirm('APAGAR TODOS OS CADASTROS?')) resetAllData(); this.parentElement.parentElement.parentElement.remove();" style="width: 100%; background: #ef4444; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                                🗑️ Resetar TODOS os Cadastros
+                            </button>
+
+                            <button onclick="exportToCSV(); this.parentElement.parentElement.parentElement.remove();" style="width: 100%; background: #8b5cf6; color: white; border: none; padding: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                                📥 Exportar Dados (CSV)
+                            </button>
+                        </div>
+
+                        <button onclick="this.parentElement.parentElement.remove()" style="width: 100%; margin-top: 1.5rem; background: #334155; color: white; border: none; padding: 0.75rem; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                            Fechar
+                        </button>
+
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border: 2px solid rgba(139, 92, 246, 0.3); border-radius: 6px; text-align: center;">
+                            <p style="color: #a78bfa; margin: 0; font-size: 0.85rem;">
+                                💡 Atalhos:<br>
+                                <code style="background: #1e293b; padding: 0.25rem 0.5rem; border-radius: 4px;">Ctrl+Shift+A</code> = Auditoria<br>
+                                <code style="background: #1e293b; padding: 0.25rem 0.5rem; border-radius: 4px;">Ctrl+Shift+R</code> = Admin
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', adminHTML);
         }
     </script>
 </body>
