@@ -59,130 +59,80 @@ function createPDFContent() {
 
     const content = document.createElement('div');
     content.style.cssText = `
-        font-family: 'Segoe UI', 'Arial', sans-serif;
+        font-family: Arial, sans-serif;
         color: #1e293b;
-        line-height: 1.7;
-        font-size: 14px;
-    `;
-
-    // Função auxiliar para criar rodapé
-    const createFooter = (pageNum) => `
-        <div style="position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; font-size: 10px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 8px; margin-top: 20px;">
-            <span style="float: left; margin-left: 20px;">© 2025 Márcio Gil - DIO Campus Expert</span>
-            <span>Trilhas da Transformação Tech</span>
-            <span style="float: right; margin-right: 20px;">Página ${pageNum}</span>
-        </div>
+        line-height: 1.6;
     `;
 
     content.innerHTML = `
-        <style>
-            .page {
-                position: relative;
-                min-height: 270mm;
-                padding: 30px;
-                page-break-after: always;
-            }
-            .page:last-child {
-                page-break-after: auto;
-            }
-            .gradient-bg {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-            }
-            .badge {
-                display: inline-block;
-                padding: 6px 12px;
-                background: rgba(139, 92, 246, 0.1);
-                border-radius: 6px;
-                font-size: 12px;
-                color: #8b5cf6;
-                font-weight: 600;
-                margin: 5px;
-            }
-            .card {
-                background: #f8fafc;
-                border-left: 4px solid #8b5cf6;
-                padding: 20px;
-                border-radius: 8px;
-                margin: 20px 0;
-            }
-            h2 {
-                color: #8b5cf6;
-                font-size: 28px;
-                margin-top: 0;
-                margin-bottom: 15px;
-                font-weight: bold;
-            }
-            h3 {
-                color: #6d28d9;
-                font-size: 20px;
-                margin-top: 20px;
-                margin-bottom: 12px;
-            }
-            .highlight {
-                background: linear-gradient(to right, #fef3c7, #fde68a);
-                padding: 3px 8px;
-                border-radius: 4px;
-                font-weight: 600;
-            }
-        </style>
-
-        <!-- CAPA PREMIUM -->
-        <div class="page gradient-bg" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 40px;">
-            <div style="background: white; width: 200px; height: 200px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3); margin-bottom: 40px;">
-                <img src="assets/foto-marcio-gil.jpg" alt="Márcio Gil" style="width: 190px; height: 190px; border-radius: 50%; object-fit: cover;">
-            </div>
+        <!-- CAPA -->
+        <div style="text-align: center; padding: 80px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; min-height: 100vh;">
+            <img src="assets/foto-marcio-gil.jpg" alt="Márcio Gil" style="width: 160px; height: 160px; border-radius: 50%; border: 5px solid white; object-fit: cover; margin-bottom: 30px;">
             
-            <div style="font-size: 80px; margin-bottom: 20px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));">🚀</div>
+            <div style="font-size: 60px; margin-bottom: 20px;">🚀</div>
             
-            <h1 style="font-size: 52px; color: white; margin: 20px 0; line-height: 1.1; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 4px 8px rgba(0,0,0,0.3);">
-                TRILHAS DA<br>TRANSFORMAÇÃO<br>TECH
+            <h1 style="font-size: 48px; color: white; margin: 20px 0; font-weight: bold;">
+                TRILHAS DA<br>TRANSFORMAÇÃO TECH
             </h1>
             
-            <div style="height: 4px; width: 200px; background: white; margin: 30px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
-            
-            <p style="font-size: 22px; color: #fef3c7; margin: 20px 0; font-weight: 600; letter-spacing: 1px;">
-                SEU GUIA COMPLETO PARA UMA<br>CARREIRA DE SUCESSO NA TECNOLOGIA
+            <p style="font-size: 20px; margin: 30px 0;">
+                Seu Guia Completo para uma Carreira de Sucesso na Tecnologia
             </p>
             
-            <div style="margin-top: 50px; padding: 30px; background: rgba(255,255,255,0.15); border-radius: 15px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); min-width: 400px;">
-                <p style="font-size: 18px; margin: 8px 0; color: white; font-weight: 600;">
-                    <span style="opacity: 0.8;">Criado por</span><br>
-                    <span style="font-size: 24px;">MÁRCIO GIL</span>
-                </p>
-                <div style="margin: 15px 0; height: 1px; background: rgba(255,255,255,0.3);"></div>
-                <p style="font-size: 15px; margin: 5px 0; color: #fef3c7;">
-                    ⭐ Embaixador DIO Campus Expert
-                </p>
-                <p style="font-size: 15px; margin: 5px 0; color: #e0e7ff;">
-                    🎓 Estudante de Engenharia de Software
-                </p>
+            <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 12px; margin: 40px auto; max-width: 400px;">
+                <p style="font-size: 16px; margin: 5px 0;">Criado por: <strong>Márcio Gil</strong></p>
+                <p style="font-size: 14px; margin: 5px 0;">⭐ Embaixador DIO Campus Expert</p>
+                <p style="font-size: 14px; margin: 5px 0;">🎓 Estudante de Engenharia de Software</p>
             </div>
             
-            <div style="margin-top: 40px; padding: 25px; background: rgba(254,243,199,0.2); border-radius: 12px; border: 2px solid #fef3c7; min-width: 350px;">
-                <p style="font-size: 16px; margin: 5px 0; color: #fef3c7; opacity: 0.9;">
-                    E-book Personalizado para
-                </p>
-                <p style="font-size: 28px; margin: 10px 0; color: white; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
-                    ${userName}
-                </p>
-            </div>
-            
-            <div style="margin-top: auto; padding-top: 50px;">
-                <p style="font-size: 12px; color: rgba(255,255,255,0.7);">
-                    © 2025 - Educação Gratuita e de Qualidade para Todos
-                </p>
+            <div style="background: rgba(254,243,199,0.3); padding: 20px; border-radius: 10px; margin: 30px auto; max-width: 350px;">
+                <p style="font-size: 14px; margin: 5px 0;">E-book personalizado para:</p>
+                <p style="font-size: 24px; margin: 10px 0; font-weight: bold;">${userName}</p>
             </div>
         </div>
 
         <!-- PÁGINA 1: O QUE É UM BOOTCAMP -->
-        <div class="page">
-            <div style="text-align: center; margin-bottom: 35px;">
-                <div style="font-size: 70px; margin-bottom: 15px;">🎓</div>
-                <h2 style="margin: 0;">O Que É um Bootcamp?</h2>
-                <div style="height: 3px; width: 100px; background: linear-gradient(to right, #8b5cf6, #ec4899); margin: 15px auto;"></div>
+        <div style="page-break-before: always; padding: 40px 30px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 50px;">🎓</div>
+                <h2 style="color: #8b5cf6; font-size: 28px; margin: 15px 0;">O Que É um Bootcamp?</h2>
             </div>
             
+            <p style="font-size: 14px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                Um <strong>bootcamp</strong> é um programa intensivo de aprendizado prático, projetado para transformar iniciantes em profissionais qualificados em um curto período de tempo. Diferente de cursos tradicionais que focam apenas na teoria, os bootcamps são 100% orientados à prática e aos desafios reais do mercado.
+            </p>
+            
+            <p style="font-size: 14px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                O termo "bootcamp" vem dos campos de treinamento militar. Na tecnologia, a ideia é a mesma: <strong>mergulhar de cabeça</strong> em projetos reais, resolver problemas complexos e desenvolver habilidades práticas que o mercado valoriza.
+            </p>
+
+            <div style="background: #f0fdf4; padding: 20px; border-left: 4px solid #22c55e; margin: 20px 0;">
+                <h3 style="color: #16a34a; margin-top: 0; font-size: 18px;">🎯 O Que Torna um Bootcamp Diferente?</h3>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.8; font-size: 13px;">
+                    <li><strong>Aprendizado Baseado em Projetos:</strong> Você constrói aplicações reais</li>
+                    <li><strong>Mentoria de Especialistas:</strong> Profissionais guiam sua jornada</li>
+                    <li><strong>Networking Real:</strong> Conecte-se com recrutadores e empresas</li>
+                    <li><strong>Certificação Reconhecida:</strong> Certificados valorizados pelo mercado</li>
+                    <li><strong>Portfólio Prático:</strong> Projetos reais para entrevistas</li>
+                </ul>
+            </div>
+
+            <p style="font-size: 14px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                Na <strong>DIO (Digital Innovation One)</strong>, os bootcamps são oferecidos gratuitamente através de parcerias com grandes empresas como Santander, iFood, GFT, Microsoft e outras gigantes do mercado.
+            </p>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0; text-align: center;">
+                <p style="font-size: 16px; margin: 0; font-weight: bold;">
+                    "Bootcamps não ensinam você a programar.<br>Eles ensinam você a PENSAR como um programador."
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; padding-top: 15px; border-top: 1px solid #e2e8f0; font-size: 11px; color: #94a3b8;">
+                Página 1 • Trilhas da Transformação Tech • © 2025 Márcio Gil
+            </div>
+        </div>
+
+        <!-- PÁGINA 2: A REVOLUÇÃO DA EDUCAÇÃO TECH -->            
             <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
                 Um <strong>bootcamp</strong> é um programa intensivo de aprendizado prático, projetado para transformar iniciantes em profissionais qualificados em um curto período de tempo. Diferente de cursos tradicionais que focam apenas na teoria, os bootcamps são 100% orientados à prática e aos desafios reais do mercado.
             </p>
@@ -213,8 +163,42 @@ function createPDFContent() {
             </div>
         </div>
 
-        <!-- Página 2: A Revolução da Educação Tech -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <!-- PÁGINA 2: A REVOLUÇÃO DA EDUCAÇÃO TECH -->
+        <div style="page-break-before: always; padding: 40px 30px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 50px;">🚀</div>
+                <h2 style="color: #8b5cf6; font-size: 28px; margin: 15px 0;">A Revolução da Educação Tech</h2>
+            </div>
+
+            <p style="font-size: 14px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                Há 10 anos, entrar na área de tecnologia exigia faculdade de 4 anos e dezenas de milhares de reais. <strong>Esse modelo está morto.</strong> Empresas como Google, Apple e Microsoft não exigem mais diploma universitário. Elas valorizam <strong>habilidades práticas, portfólio e experiência</strong>.
+            </p>
+
+            <div style="background: #ede9fe; padding: 20px; border-left: 4px solid #8b5cf6; margin: 20px 0;">
+                <h3 style="color: #6d28d9; margin-top: 0; font-size: 18px;">⚡ Por Que os Bootcamps Funcionam?</h3>
+                <p style="font-size: 13px; margin: 8px 0;"><strong>Velocidade:</strong> Aprenda em 3-6 meses o que levaria anos</p>
+                <p style="font-size: 13px; margin: 8px 0;"><strong>Empregabilidade:</strong> 73% conseguem emprego em 6 meses</p>
+                <p style="font-size: 13px; margin: 8px 0;"><strong>ROI Incrível:</strong> Com bootcamps gratuitos, retorno infinito</p>
+                <p style="font-size: 13px; margin: 8px 0;"><strong>Foco no Mercado:</strong> Conteúdo atualizado constantemente</p>
+            </div>
+
+            <p style="font-size: 14px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                A pandemia acelerou essa revolução. Trabalho remoto funciona! Você pode trabalhar para empresas internacionais, ganhando em dólar ou euro, sem sair de casa.
+            </p>
+
+            <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                <p style="margin: 0; font-size: 13px; line-height: 1.7;">
+                    <strong>💡 Fato Real:</strong> Desenvolvedores júnior no Brasil ganham R$ 3.500-5.000. Sênior podem ultrapassar R$ 20.000/mês. E começa com um bootcamp gratuito.
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; padding-top: 15px; border-top: 1px solid #e2e8f0; font-size: 11px; color: #94a3b8;">
+                Página 2 • Trilhas da Transformação Tech • © 2025 Márcio Gil
+            </div>
+        </div>
+
+        <!-- PÁGINA 3: OPORTUNIDADES REAIS -->
+        <div style="page-break-before: always; padding: 40px 30px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🚀</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -264,7 +248,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 3: Oportunidades Reais de Carreira -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 30px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">💼</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -313,7 +297,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 4: Como Funciona o Aprendizado Imersivo -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 30px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🎯</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -363,7 +347,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 5: As Trilhas da Tecnologia -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 30px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🗺️</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -404,7 +388,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 6: O Valor das Soft Skills -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 30px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🤝</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -439,7 +423,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 7: Como Se Destacar nos Bootcamps -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 30px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">⭐</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -1148,3 +1132,4 @@ function hidePDFLoading() {
         loading.remove();
     }
 }
+
