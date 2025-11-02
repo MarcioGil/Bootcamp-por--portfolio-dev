@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- html2pdf.js para geração de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -27,6 +30,7 @@
                 <a href="#trilhas" class="nav-link">Trilhas</a>
                 <a href="#autor" class="nav-link">Autor</a>
                 <a href="#download" class="nav-link cta-nav">Baixar E-book</a>
+                <button id="logoutBtn" class="btn btn-secondary" style="display: none;" onclick="logout()">Sair</button>
             </nav>
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <span></span>
@@ -386,32 +390,22 @@
                 <div class="download-content">
                     <h2 id="download-title" class="download-title">Baixe o E-book Completo</h2>
                     <p class="download-description">
-                        Receba gratuitamente o e-book "Trilhas da Transformação Tech" com todas as trilhas, bootcamps e links diretos para começar sua jornada agora.
+                        Você já tem acesso ao e-book completo! Baixe o PDF com todas as trilhas, bootcamps e links diretos para começar sua jornada agora.
                     </p>
                     <ul class="download-benefits">
-                        <li>✅ E-book completo em PDF</li>
+                        <li>✅ E-book completo em PDF personalizado</li>
                         <li>✅ Links clicáveis para todos os bootcamps</li>
                         <li>✅ Código de indicação incluso</li>
                         <li>✅ 100% gratuito</li>
                     </ul>
-                </div>
-                <div class="download-form-wrapper">
-                    <form id="downloadForm" class="download-form" role="form" aria-label="Formulário para download do e-book">
-                        <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" name="name" required placeholder="Seu nome" aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required placeholder="seu@email.com" aria-required="true">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full" aria-label="Baixar e-book gratuitamente">
-                            <span>📥</span> Baixar E-book Agora
-                        </button>
-                        <p class="form-privacy">
-                            🔒 Seus dados estão seguros. Não enviamos spam.
-                        </p>
-                    </form>
+                    
+                    <button onclick="downloadEbookPDF()" class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 18px; margin-top: 20px;">
+                        <span>📥</span> Baixar E-book em PDF
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 15px; color: #a78bfa; font-size: 14px;">
+                        💡 O PDF será gerado com seu nome personalizado!
+                    </p>
                 </div>
             </div>
         </div>
@@ -463,7 +457,30 @@
         </div>
     </footer>
 
+    <script src="auth.js"></script>
     <script src="accessibility.js"></script>
     <script src="script.js"></script>
+    <script src="pdf-generator.js"></script>
+    <script>
+        // Verificar se o usuário está logado
+        window.addEventListener('DOMContentLoaded', () => {
+            if (isLoggedIn()) {
+                // Mostrar botão de logout
+                const logoutBtn = document.getElementById('logoutBtn');
+                if (logoutBtn) {
+                    logoutBtn.style.display = 'inline-block';
+                }
+                
+                // Mostrar nome do usuário
+                const user = getCurrentUser();
+                if (user) {
+                    console.log('Bem-vindo,', user.name);
+                }
+            } else {
+                // Redirecionar para login
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
 </body>
 </html>
