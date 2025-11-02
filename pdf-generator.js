@@ -437,6 +437,358 @@ function createPDFContent() {
 
         ${generateAllTrilhasContent()}
 
+        <!-- Página Extra 1: Aprendizado em Comunidade -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">🌐</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    O Poder da Comunidade no Aprendizado
+                </h2>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Ninguém aprende tecnologia sozinho. Mesmo os maiores especialistas do mundo consultam Stack Overflow, participam de fóruns e colaboram com outros desenvolvedores. A comunidade tech é seu maior ativo no aprendizado.
+            </p>
+
+            <div style="background: #ede9fe; padding: 25px; border-radius: 12px; margin: 25px 0;">
+                <h3 style="color: #6d28d9; margin-top: 0; font-size: 20px;">🤝 Como Aproveitar a Comunidade DIO:</h3>
+                
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">💬 Fóruns de Discussão:</strong> Tire dúvidas e ajude outros estudantes. Ensinar é uma das melhores formas de consolidar conhecimento.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">👥 Grupos no Discord:</strong> Conecte-se com pessoas que estão na mesma trilha que você. Formem grupos de estudo!
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">📱 LinkedIn Ativo:</strong> Compartilhe seu progresso, projetos e conquistas. Recrutadores estão olhando!
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">🎙️ Lives e Eventos:</strong> Participe de eventos online, webinars e live codings. Networking acontece aqui.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 0; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">🏆 Desafios de Código:</strong> Compete de forma saudável e aprenda com as soluções de outros.
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: #f0fdf4; padding: 20px; border-left: 5px solid #22c55e; margin: 25px 0; border-radius: 5px;">
+                <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #065f46;">
+                    <strong>💡 Regra de Ouro:</strong> Para cada dúvida que você tira na comunidade, ajude a responder duas dúvidas de outros. O conhecimento se multiplica quando compartilhado.
+                </p>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Muitas das oportunidades mais incríveis na tech não vêm de aplicações formais, mas de <strong>indicações e conexões genuínas</strong> feitas na comunidade. Seu networking começa nos fóruns dos bootcamps.
+            </p>
+        </div>
+
+        <!-- Página Extra 2: Primeiros Passos Práticos -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">👣</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    Seus Primeiros Passos na Prática
+                </h2>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Você está animado para começar, mas por onde exatamente? Aqui está um guia prático do seu primeiro mês na jornada tech, passo a passo.
+            </p>
+
+            <div style="background: #fff7ed; padding: 25px; border-radius: 12px; margin: 25px 0;">
+                <h3 style="color: #ea580c; margin-top: 0; font-size: 20px;">📅 Seu Primeiro Mês - Cronograma Sugerido:</h3>
+                
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #ea580c;">Semana 1 - Configuração e Exploração:</strong>
+                    </p>
+                    <ul style="margin: 0 0 20px 20px; padding-left: 20px; line-height: 1.7; font-size: 14px;">
+                        <li>Crie sua conta na DIO e complete seu perfil</li>
+                        <li>Inscreva-se em 1-2 bootcamps da sua trilha escolhida</li>
+                        <li>Configure seu ambiente de desenvolvimento (VS Code, Git, etc.)</li>
+                        <li>Crie uma conta no GitHub e LinkedIn profissional</li>
+                    </ul>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #ea580c;">Semana 2 - Primeiros Módulos:</strong>
+                    </p>
+                    <ul style="margin: 0 0 20px 20px; padding-left: 20px; line-height: 1.7; font-size: 14px;">
+                        <li>Complete os primeiros módulos do bootcamp (mínimo 1h/dia)</li>
+                        <li>Faça TODOS os exercícios práticos, mesmo os opcionais</li>
+                        <li>Documente seu aprendizado em um arquivo README</li>
+                        <li>Participe do fórum do bootcamp, tire 1 dúvida</li>
+                    </ul>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #ea580c;">Semana 3 - Projeto Inicial:</strong>
+                    </p>
+                    <ul style="margin: 0 0 20px 20px; padding-left: 20px; line-height: 1.7; font-size: 14px;">
+                        <li>Inicie seu primeiro projeto guiado do bootcamp</li>
+                        <li>Versione o código no GitHub desde o início</li>
+                        <li>Escreva um README explicando o que o projeto faz</li>
+                        <li>Compartilhe o repositório no LinkedIn</li>
+                    </ul>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #ea580c;">Semana 4 - Revisão e Consolidação:</strong>
+                    </p>
+                    <ul style="margin: 0 0 0 20px; padding-left: 20px; line-height: 1.7; font-size: 14px;">
+                        <li>Revise conceitos que ficaram confusos</li>
+                        <li>Adicione uma funcionalidade extra ao seu projeto</li>
+                        <li>Conecte-se com 5 pessoas da sua trilha no LinkedIn</li>
+                        <li>Planeje o próximo mês de estudos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; color: white; margin: 25px 0;">
+                <p style="font-size: 17px; margin: 0; text-align: center; font-weight: bold; line-height: 1.6;">
+                    "O segredo não é estudar muito em um dia. É estudar um pouco todos os dias. Consistência > Intensidade."
+                </p>
+            </div>
+        </div>
+
+        <!-- Página Extra 3: Mentalidade de Crescimento -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">🧠</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    Mentalidade de Crescimento na Tech
+                </h2>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                A diferença entre quem desiste e quem alcança sucesso na tecnologia não está no QI ou talento natural. Está na <strong>mentalidade</strong>. Sua forma de pensar sobre desafios determina seu sucesso.
+            </p>
+
+            <div style="background: #fef3c7; padding: 20px; border-radius: 10px; margin: 25px 0;">
+                <h3 style="color: #d97706; margin-top: 0; font-size: 18px;">🚫 Mentalidade Fixa (Evite!):</h3>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.8; font-size: 15px;">
+                    <li style="margin: 8px 0;">"Não sou bom em matemática, nunca vou ser programador"</li>
+                    <li style="margin: 8px 0;">"Outras pessoas aprendem mais rápido, não é pra mim"</li>
+                    <li style="margin: 8px 0;">"Esse erro significa que não tenho talento"</li>
+                    <li style="margin: 8px 0;">"Já tentei aprender antes e não consegui"</li>
+                </ul>
+            </div>
+
+            <div style="background: #f0fdf4; padding: 20px; border-radius: 10px; margin: 25px 0;">
+                <h3 style="color: #16a34a; margin-top: 0; font-size: 18px;">✅ Mentalidade de Crescimento (Cultive!):</h3>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.8; font-size: 15px;">
+                    <li style="margin: 8px 0;">"Ainda não sei isso, mas posso aprender"</li>
+                    <li style="margin: 8px 0;">"Cada pessoa tem seu ritmo, o meu está perfeito"</li>
+                    <li style="margin: 8px 0;">"Erros são feedback valioso do que preciso estudar mais"</li>
+                    <li style="margin: 8px 0;">"Cada tentativa anterior me preparou para esta"</li>
+                </ul>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                <strong>Síndrome do Impostor</strong> é real e afeta até desenvolvedores sênior. Aquela sensação de "não sou bom o suficiente" ou "todos sabem mais que eu" é <strong>normal</strong>. A diferença é que profissionais bem-sucedidos continuam mesmo sentindo isso.
+            </p>
+
+            <div style="background: #ede9fe; padding: 25px; border-radius: 12px; margin: 25px 0;">
+                <h3 style="color: #6d28d9; margin-top: 0; font-size: 20px;">💪 5 Verdades que Vão Te Libertar:</h3>
+                
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">1.</strong> Ninguém sabe tudo. Desenvolvedores sênior consultam documentação o tempo todo.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">2.</strong> Erros são parte do processo. Um código que funciona de primeira é suspeito.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">3.</strong> Comparação é o ladrão da alegria. Compare-se apenas com você de ontem.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">4.</strong> Pedir ajuda é força, não fraqueza. Os melhores profissionais colaboram.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 0; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">5.</strong> Você não precisa ser gênio. Precisa ser consistente e curioso.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página Extra 4: Histórias Reais de Transformação -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">⭐</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    Histórias Reais de Transformação
+                </h2>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Às vezes, acreditar que é possível fica mais fácil quando vemos pessoas reais que conseguiram. Aqui estão padrões comuns de quem transformou vida através dos bootcamps da DIO:
+            </p>
+
+            <div style="background: #f8fafc; padding: 20px; border-radius: 10px; margin: 25px 0; border-left: 4px solid #8b5cf6;">
+                <h4 style="color: #8b5cf6; margin-top: 0; font-size: 17px;">👨‍🍳 De Cozinheiro a Desenvolvedor</h4>
+                <p style="font-size: 15px; line-height: 1.7; margin: 10px 0;">
+                    <em>"Trabalhava 12h por dia em restaurante. Comecei estudando 1h de madrugada depois do trabalho. Completei 3 bootcamps em 8 meses. Hoje sou dev júnior ganhando 3x mais e trabalhando de casa."</em>
+                </p>
+                <p style="font-size: 13px; color: #64748b; margin: 5px 0;">— Padrão comum entre profissionais em transição de carreira</p>
+            </div>
+
+            <div style="background: #f8fafc; padding: 20px; border-radius: 10px; margin: 25px 0; border-left: 4px solid #06b6d4;">
+                <h4 style="color: #06b6d4; margin-top: 0; font-size: 17px;">👩‍🎓 Recém-formada Sem Experiência</h4>
+                <p style="font-size: 15px; line-height: 1.7; margin: 10px 0;">
+                    <em>"Me formei em Administração mas não encontrava emprego. Fiz bootcamp de Front-End, construí 5 projetos no GitHub. Fui contratada pela empresa parceira do bootcamp antes mesmo de terminar."</em>
+                </p>
+                <p style="font-size: 13px; color: #64748b; margin: 5px 0;">— Padrão comum entre recém-formados que complementam formação</p>
+            </div>
+
+            <div style="background: #f8fafc; padding: 20px; border-radius: 10px; margin: 25px 0; border-left: 4px solid #22c55e;">
+                <h4 style="color: #22c55e; margin-top: 0; font-size: 17px;">👨‍💼 Profissional Buscando Crescimento</h4>
+                <p style="font-size: 15px; line-height: 1.7; margin: 10px 0;">
+                    <em>"Já era da área de TI mas em suporte. Queria programar mas não sabia por onde começar. Bootcamps me deram estrutura. Em 1 ano virei desenvolvedor back-end com aumento de 80%."</em>
+                </p>
+                <p style="font-size: 13px; color: #64748b; margin: 5px 0;">— Padrão comum entre profissionais tech buscando evolução</p>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; color: white; margin: 25px 0;">
+                <p style="font-size: 17px; margin: 0; text-align: center; font-weight: bold; line-height: 1.6;">
+                    "O ponto em comum? Todos começaram sem acreditar totalmente que conseguiriam. Mas começaram mesmo assim."
+                </p>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Sua história pode ser a próxima. Não porque você é especial ou sortudo, mas porque você está disposto a <strong>fazer o trabalho necessário</strong>.
+            </p>
+        </div>
+
+        <!-- Página Extra 5: Ferramentas Essenciais -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">🛠️</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    Ferramentas Essenciais do Desenvolvedor
+                </h2>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Antes de mergulhar nos bootcamps, você precisa de algumas ferramentas básicas. A boa notícia? <strong>Todas são gratuitas</strong> e fáceis de configurar.
+            </p>
+
+            <div style="background: #ede9fe; padding: 25px; border-radius: 12px; margin: 25px 0;">
+                <h3 style="color: #6d28d9; margin-top: 0; font-size: 20px;">💻 Stack de Ferramentas Inicial:</h3>
+                
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">📝 VS Code:</strong> O editor de código mais popular do mundo. Leve, poderoso e com milhares de extensões.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">🔄 Git + GitHub:</strong> Controle de versão essencial. Todo código profissional usa Git. GitHub é seu portfólio visual.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">🌐 Navegadores DevTools:</strong> Chrome DevTools ou Firefox Developer Edition para debugar front-end.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">📦 Node.js:</strong> Necessário para desenvolvimento JavaScript moderno, tanto front quanto back-end.
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 0; line-height: 1.7;">
+                        <strong style="color: #8b5cf6;">💬 Discord/Slack:</strong> Comunicação com comunidade e times de desenvolvimento.
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: #f0fdf4; padding: 20px; border-left: 5px solid #22c55e; margin: 25px 0; border-radius: 5px;">
+                <h3 style="color: #16a34a; margin-top: 0; font-size: 18px;">🎯 Extensões VS Code Recomendadas:</h3>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.7; font-size: 14px;">
+                    <li style="margin: 8px 0;"><strong>Live Server:</strong> Servidor local para desenvolvimento web</li>
+                    <li style="margin: 8px 0;"><strong>GitLens:</strong> Superpoderes para Git no VS Code</li>
+                    <li style="margin: 8px 0;"><strong>Prettier:</strong> Formatação automática de código</li>
+                    <li style="margin: 8px 0;"><strong>ESLint:</strong> Detecta erros e boas práticas JavaScript</li>
+                    <li style="margin: 8px 0;"><strong>Bracket Pair Colorizer:</strong> Facilita leitura do código</li>
+                </ul>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Não se preocupe se isso parece muito agora. Os bootcamps te guiam na instalação e uso de cada ferramenta no momento certo. Muitos até oferecem módulos específicos sobre setup de ambiente.
+            </p>
+        </div>
+
+        <!-- Página Extra 6: Próximo Nível -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">🚀</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    De Aluno a Profissional: O Próximo Nível
+                </h2>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Você completou bootcamps, tem projetos no GitHub, certificados conquistados. E agora? Como dar o salto de estudante para profissional contratado?
+            </p>
+
+            <div style="background: #fff7ed; padding: 25px; border-radius: 12px; margin: 25px 0;">
+                <h3 style="color: #ea580c; margin-top: 0; font-size: 20px;">📋 Checklist: Pronto para o Mercado?</h3>
+                
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        ✅ <strong>Pelo menos 3 projetos completos no GitHub</strong> (não apenas exercícios de curso)
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        ✅ <strong>README profissional em cada projeto</strong> explicando o que faz e como rodar
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        ✅ <strong>LinkedIn otimizado</strong> com foto profissional, resumo forte e projetos linkados
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        ✅ <strong>Portfólio online</strong> (pode ser GitHub Pages gratuito) mostrando seus melhores trabalhos
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        ✅ <strong>Certificados de bootcamps completos</strong> de plataformas reconhecidas (DIO, etc.)
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 12px; line-height: 1.7;">
+                        ✅ <strong>Contribuição em open source</strong> ou participação ativa em comunidades
+                    </p>
+
+                    <p style="font-size: 15px; margin-bottom: 0; line-height: 1.7;">
+                        ✅ <strong>Presença online consistente</strong> compartilhando aprendizados e progresso
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: #f0fdf4; padding: 20px; border-radius: 10px; margin: 25px 0;">
+                <h3 style="color: #16a34a; margin-top: 0; font-size: 18px;">💼 Estratégias de Busca de Emprego:</h3>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.7; font-size: 14px;">
+                    <li style="margin: 10px 0;"><strong>Vagas das Empresas Parceiras:</strong> Priorize processos seletivos exclusivos dos bootcamps</li>
+                    <li style="margin: 10px 0;"><strong>LinkedIn Ativo:</strong> Interaja com posts de recrutadores, comente, seja visível</li>
+                    <li style="margin: 10px 0;"><strong>Networking Real:</strong> Conecte-se com alunos que já foram contratados</li>
+                    <li style="margin: 10px 0;"><strong>Projetos Diferenciados:</strong> Não faça apenas to-do lists. Crie algo único</li>
+                    <li style="margin: 10px 0;"><strong>Contribua com Open Source:</strong> Mostra trabalho em equipe e código real</li>
+                </ul>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; color: white; margin: 25px 0;">
+                <p style="font-size: 17px; margin: 0; text-align: center; font-weight: bold; line-height: 1.6;">
+                    "A primeira vaga é a mais difícil. Depois dela, com experiência no currículo, as portas se abrem exponencialmente."
+                </p>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Não desanime com rejeições. Elas fazem parte do processo. Cada "não" te aproxima do "sim" certo. Continue aplicando, continue aprendendo, continue construindo. Sua hora vai chegar.
+            </p>
+        </div>
+
         <!-- Conclusão -->
         <div style="page-break-before: always;">
             <h2 style="color: #8b5cf6; font-size: 32px; margin-bottom: 20px; border-bottom: 3px solid #8b5cf6; padding-bottom: 10px;">
