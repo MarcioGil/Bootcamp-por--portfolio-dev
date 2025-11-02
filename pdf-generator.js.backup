@@ -341,7 +341,7 @@ function generateAllTrilhasContent() {
             icon: '⚙️',
             title: 'Back-End',
             subtitle: 'O Poder por Trás do Código',
-            description: 'Aprenda a desenvolver sistemas robustos e escaláveis. Domine Java, Python, Spring Boot, Testes e APIs REST que fazem tudo funcionar nos bastidores.',
+            description: 'Aprenda a desenvolver sistemas robustos e escaláveis. Domine Java, Python, Spring Boot e APIs REST que fazem tudo funcionar nos bastidores.',
             bootcamps: [
                 {
                     name: 'GFT Start #7 - Java Developer',
@@ -352,16 +352,6 @@ function generateAllTrilhasContent() {
                     name: 'Potência Tech iFood - Back-End Python',
                     description: 'Construa soluções eficientes com Python e APIs.',
                     url: 'https://www.dio.me/bootcamp/potencia-tech-ifood-desenvolvimento-de-back-end-com-python?ref=AFILIADOS66FD57E0D94'
-                },
-                {
-                    name: 'Bradesco - Java QA Developer',
-                    description: 'Aprenda desenvolvimento Java focado em qualidade e testes automatizados.',
-                    url: 'https://www.dio.me/bootcamp/bradesco-java-qa-developer?ref=AFILIADOS66FD57E0D94'
-                },
-                {
-                    name: 'LuizaLabs - Back-End com Python',
-                    description: 'Desenvolva aplicações back-end escaláveis com Python e boas práticas.',
-                    url: 'https://www.dio.me/bootcamp/luizalabs-back-end-com-python?ref=AFILIADOS66FD57E0D94'
                 }
             ]
         },
