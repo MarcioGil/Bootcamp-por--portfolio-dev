@@ -13,29 +13,38 @@ async function downloadEbookPDF() {
 
         // Criar conteúdo do PDF
         const content = createPDFContent();
+        
+        // IMPORTANTE: Adicionar ao DOM temporariamente para renderizar
+        content.style.position = 'absolute';
+        content.style.left = '-9999px';
+        document.body.appendChild(content);
 
-        // Configurações do PDF
+        // Aguardar imagens carregarem
+        await new Promise(resolve => setTimeout(resolve, 500));
+
+        // Configurações do PDF - SIMPLIFICADAS
         const opt = {
-            margin: [10, 10, 10, 10],
+            margin: 15,
             filename: 'trilhas-transformacao-tech.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
+            image: { type: 'jpeg', quality: 0.95 },
             html2canvas: { 
                 scale: 2,
                 useCORS: true,
-                logging: false,
-                letterRendering: true
+                logging: true
             },
             jsPDF: { 
                 unit: 'mm', 
                 format: 'a4', 
-                orientation: 'portrait',
-                compress: true
+                orientation: 'portrait'
             },
-            pagebreak: { mode: 'css', avoid: ['img', 'div.no-break'] }
+            pagebreak: { mode: 'avoid-all' }
         };
 
         // Gerar PDF
         await html2pdf().set(opt).from(content).save();
+        
+        // Remover do DOM
+        document.body.removeChild(content);
 
         // Remover loading
         hidePDFLoading();
