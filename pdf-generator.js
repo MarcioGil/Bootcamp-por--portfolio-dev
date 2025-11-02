@@ -66,26 +66,157 @@ function createPDFContent() {
     `;
 
     content.innerHTML = `
-        <!-- Capa -->
-        <div style="text-align: center; padding: 60px 0; page-break-after: always;">
-            <div style="font-size: 72px; margin-bottom: 20px;">🚀</div>
-            <h1 style="font-size: 42px; color: #8b5cf6; margin: 20px 0;">
+        <!-- Capa com Foto -->
+        <div style="text-align: center; padding: 40px 0; page-break-after: always;">
+            <div style="margin-bottom: 30px;">
+                <img src="assets/foto-marcio-gil.jpg" alt="Márcio Gil" style="width: 180px; height: 180px; border-radius: 50%; border: 5px solid #8b5cf6; object-fit: cover; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);">
+            </div>
+            <div style="font-size: 52px; margin-bottom: 15px;">🚀</div>
+            <h1 style="font-size: 38px; color: #8b5cf6; margin: 15px 0; line-height: 1.2;">
                 Trilhas da Transformação Tech
             </h1>
-            <p style="font-size: 20px; color: #64748b; margin: 10px 0;">
+            <p style="font-size: 18px; color: #64748b; margin: 10px 0;">
                 Descubra sua Trilha Tech e Transforme sua Carreira
             </p>
-            <div style="margin-top: 40px; padding: 20px; background: #f8fafc; border-radius: 10px;">
-                <p style="font-size: 18px; margin: 5px 0;"><strong>Por:</strong> Márcio Gil</p>
-                <p style="font-size: 16px; margin: 5px 0; color: #8b5cf6;">Embaixador DIO Campus Expert</p>
+            <div style="margin-top: 30px; padding: 18px; background: #f8fafc; border-radius: 10px;">
+                <p style="font-size: 16px; margin: 5px 0;"><strong>Por:</strong> Márcio Gil</p>
+                <p style="font-size: 15px; margin: 5px 0; color: #8b5cf6;">🌟 Embaixador DIO Campus Expert</p>
+                <p style="font-size: 14px; margin: 5px 0; color: #64748b;">🎓 Estudante de Engenharia de Software</p>
             </div>
-            <div style="margin-top: 40px; padding: 15px; background: #ede9fe; border-radius: 10px;">
-                <p style="font-size: 16px; margin: 5px 0;"><strong>E-book personalizado para:</strong></p>
-                <p style="font-size: 18px; margin: 5px 0; color: #8b5cf6;">${userName}</p>
+            <div style="margin-top: 30px; padding: 15px; background: #ede9fe; border-radius: 10px;">
+                <p style="font-size: 15px; margin: 5px 0;"><strong>E-book personalizado para:</strong></p>
+                <p style="font-size: 17px; margin: 5px 0; color: #8b5cf6;">${userName}</p>
             </div>
         </div>
 
-        <!-- Introdução -->
+        <!-- Página Motivacional 1: O Poder da Educação -->
+        <div style="page-break-after: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">📚</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    O Poder Transformador da Educação
+                </h2>
+            </div>
+            
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                A educação sempre foi e sempre será a ferramenta mais poderosa para transformar vidas. Mas vivemos em um momento único da história, onde o acesso ao conhecimento de qualidade nunca esteve tão democrático.
+            </p>
+            
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Antigamente, aprender uma nova profissão exigia investimentos altos, deslocamentos diários e muitas vezes a interrupção de outras atividades. Hoje, com plataformas como a DIO, você pode estudar no seu tempo, do seu jeito, e <strong>completamente de graça</strong>.
+            </p>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; color: white; margin: 25px 0;">
+                <p style="font-size: 18px; margin: 0; text-align: center; font-weight: bold; line-height: 1.6;">
+                    "A educação é a arma mais poderosa que você pode usar para mudar o mundo."
+                </p>
+                <p style="text-align: center; margin-top: 10px; font-size: 14px; opacity: 0.9;">
+                    — Nelson Mandela
+                </p>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Cada bootcamp que você encontrará neste e-book representa centenas de horas de conteúdo desenvolvido por especialistas, projetos práticos, mentorias e uma comunidade vibrante de estudantes. Tudo isso disponível para você sem custo algum.
+            </p>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                O que separa você da carreira dos seus sonhos não é mais dinheiro ou localização geográfica. É apenas <strong>decisão e dedicação</strong>.
+            </p>
+        </div>
+
+        <!-- Página Motivacional 2: Uma Oportunidade Única -->
+        <div style="page-break-after: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">🌟</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    Uma Oportunidade Única na História
+                </h2>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Você está vivendo um momento histórico. Nunca antes na história da humanidade tantas oportunidades de aprendizado de alta qualidade estiveram disponíveis gratuitamente. E mais: nunca o mercado de tecnologia esteve tão aquecido e necessitado de profissionais qualificados.
+            </p>
+
+            <div style="background: #f0fdf4; padding: 20px; border-left: 5px solid #22c55e; margin: 25px 0; border-radius: 5px;">
+                <h3 style="color: #16a34a; margin-top: 0; font-size: 20px;">💡 Pense nisso:</h3>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.8;">
+                    <li style="margin: 10px 0;">📊 O mercado de tecnologia cresce <strong>3x mais rápido</strong> que outros setores</li>
+                    <li style="margin: 10px 0;">💰 Salários na área tech estão entre os <strong>mais altos do mercado</strong></li>
+                    <li style="margin: 10px 0;">🌍 Você pode trabalhar de <strong>qualquer lugar do mundo</strong></li>
+                    <li style="margin: 10px 0;">🚀 Há <strong>mais vagas abertas</strong> do que profissionais qualificados</li>
+                    <li style="margin: 10px 0;">🎓 Não é necessário diploma universitário para <strong>começar</strong></li>
+                </ul>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                A DIO, através de parcerias com grandes empresas, oferece bootcamps que preparam você diretamente para o mercado de trabalho. São conteúdos práticos, atualizados e alinhados com o que as empresas realmente procuram.
+            </p>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Enquanto algumas pessoas pagam milhares de reais em cursos, você tem acesso ao mesmo nível de qualidade — ou até superior — completamente gratuito. Essa é uma janela de oportunidade que não estará aberta para sempre.
+            </p>
+
+            <div style="background: #fef3c7; padding: 20px; border-left: 5px solid #f59e0b; margin: 25px 0; border-radius: 5px;">
+                <p style="margin: 0; font-size: 16px; line-height: 1.8; color: #78350f;">
+                    <strong>⚡ Momento de Agir:</strong> O melhor momento para começar foi há um ano. O segundo melhor momento é agora. Não deixe essa oportunidade passar!
+                </p>
+            </div>
+        </div>
+
+        <!-- Página Motivacional 3: Sua História Começa Aqui -->
+        <div style="page-break-after: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">🎯</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    Sua História de Sucesso Começa Aqui
+                </h2>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Cada grande profissional da tecnologia que você admira hoje começou exatamente onde você está agora: no início da jornada, com dúvidas, medos e incertezas. A diferença é que eles deram o primeiro passo.
+            </p>
+
+            <div style="background: #ede9fe; padding: 25px; border-radius: 12px; margin: 25px 0;">
+                <h3 style="color: #6d28d9; margin-top: 0; font-size: 20px; text-align: center;">🌱 Os Três Pilares do Sucesso na Tech</h3>
+                
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 16px; margin-bottom: 10px;"><strong style="color: #8b5cf6;">1. Curiosidade Constante</strong></p>
+                    <p style="font-size: 15px; margin: 0 0 15px 20px; line-height: 1.7;">
+                        A tecnologia evolui rapidamente. Os profissionais de sucesso são aqueles que mantêm a curiosidade viva e nunca param de aprender.
+                    </p>
+
+                    <p style="font-size: 16px; margin-bottom: 10px;"><strong style="color: #8b5cf6;">2. Prática Deliberada</strong></p>
+                    <p style="font-size: 15px; margin: 0 0 15px 20px; line-height: 1.7;">
+                        Não basta assistir aulas. É preciso colocar a mão no código, errar, debugar e construir projetos reais. A prática torna permanente.
+                    </p>
+
+                    <p style="font-size: 16px; margin-bottom: 10px;"><strong style="color: #8b5cf6;">3. Comunidade e Networking</strong></p>
+                    <p style="font-size: 15px; margin: 0 0 0 20px; line-height: 1.7;">
+                        Conecte-se com outros estudantes, participe de fóruns, compartilhe seus projetos. Muitas oportunidades surgem através da rede de contatos.
+                    </p>
+                </div>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Este e-book não é apenas uma lista de cursos. É um <strong>mapa cuidadosamente desenhado</strong> para guiar você da curiosidade inicial até a realização profissional. Cada trilha foi pensada para formar profissionais completos e preparados para o mercado.
+            </p>
+
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Você não precisa fazer todas as trilhas de uma vez. Escolha uma que ressoe com você, dedique-se a ela e complete os bootcamps com excelência. Os resultados virão naturalmente.
+            </p>
+
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; color: white; margin: 25px 0;">
+                <p style="font-size: 17px; margin: 0; text-align: center; font-weight: bold; line-height: 1.6;">
+                    Daqui a um ano, você pode estar trabalhando na área dos seus sonhos ou ainda pensando em começar. A escolha é sua.
+                </p>
+            </div>
+
+            <p style="font-size: 16px; margin-bottom: 0; line-height: 1.8; text-align: center; font-style: italic; color: #64748b;">
+                Acredite no seu potencial. Você é capaz de muito mais do que imagina. 💜
+            </p>
+        </div>
+
+        <!-- Introdução Técnica -->
         <div style="page-break-after: always;">
             <h2 style="color: #8b5cf6; font-size: 32px; margin-bottom: 20px; border-bottom: 3px solid #8b5cf6; padding-bottom: 10px;">
                 📖 Bem-vindo à sua Jornada Tech!
@@ -192,15 +323,17 @@ function generateAllTrilhasContent() {
             icon: '💻',
             title: 'Front-End',
             subtitle: 'Criando Experiências Digitais',
-            description: 'Aprenda a criar interfaces visuais incríveis e experiências de usuário que fazem a diferença.',
+            description: 'Quer aprender a dar vida às telas que as pessoas usam todos os dias? Domine HTML, CSS, JavaScript, Angular e React criando interfaces modernas e responsivas.',
             bootcamps: [
                 {
-                    name: 'Coding The Future Squadio - Desenvolvedora Front-End',
-                    url: 'https://web.dio.me/track/coding-future-squadio-front-end?ref=AFILIADOS66FD57E0D94'
+                    name: 'Santander 2025 - Front-End com Angular',
+                    description: 'Crie interfaces modernas e construa um portfólio poderoso com Angular.',
+                    url: 'https://www.dio.me/bootcamp/santander-2025-frontend-com-angular?ref=AFILIADOS66FD57E0D94'
                 },
                 {
-                    name: 'Coding The Future Claro - Java com Spring Boot',
-                    url: 'https://web.dio.me/track/coding-future-claro-java-spring-boot?ref=AFILIADOS66FD57E0D94'
+                    name: 'Potência Tech iFood - Front-end',
+                    description: 'Transforme criatividade em código com HTML, CSS, JavaScript e React.',
+                    url: 'https://www.dio.me/bootcamp/potencia-tech-ifood-desenvolvimento-de-front-end?ref=AFILIADOS66FD57E0D94'
                 }
             ]
         },
@@ -208,15 +341,17 @@ function generateAllTrilhasContent() {
             icon: '⚙️',
             title: 'Back-End',
             subtitle: 'O Poder por Trás do Código',
-            description: 'Domine a lógica de programação, bancos de dados e APIs que sustentam aplicações robustas.',
+            description: 'Aprenda a desenvolver sistemas robustos e escaláveis. Domine Java, Python, Spring Boot e APIs REST que fazem tudo funcionar nos bastidores.',
             bootcamps: [
                 {
-                    name: 'Coding The Future Vivo - Python AI Backend Developer',
-                    url: 'https://web.dio.me/track/coding-future-vivo-python-ai-backend-developer?ref=AFILIADOS66FD57E0D94'
+                    name: 'GFT Start #7 - Java Developer',
+                    description: 'Desenvolva sistemas robustos com Java, Spring Boot e APIs REST.',
+                    url: 'https://www.dio.me/bootcamp/gft-start-7-java-developer?ref=AFILIADOS66FD57E0D94'
                 },
                 {
-                    name: 'Coding The Future GFT - Desenvolvimento Java com IA',
-                    url: 'https://web.dio.me/track/coding-future-gft-desenvolvimento-java-com-ia?ref=AFILIADOS66FD57E0D94'
+                    name: 'Potência Tech iFood - Back-End Python',
+                    description: 'Construa soluções eficientes com Python e APIs.',
+                    url: 'https://www.dio.me/bootcamp/potencia-tech-ifood-desenvolvimento-de-back-end-com-python?ref=AFILIADOS66FD57E0D94'
                 }
             ]
         },
@@ -224,15 +359,17 @@ function generateAllTrilhasContent() {
             icon: '☁️',
             title: 'Cloud Computing',
             subtitle: 'O Futuro Está na Nuvem',
-            description: 'Entre no universo da computação em nuvem e aprenda a escalar sistemas globalmente.',
+            description: 'Compreenda como funcionam os serviços de nuvem. Construa soluções escaláveis com Azure e AWS e prepare-se para certificações globais.',
             bootcamps: [
                 {
-                    name: 'Coding The Future XP Inc. - Full Stack Developer',
-                    url: 'https://web.dio.me/track/coding-future-xp-full-stack-developer?ref=AFILIADOS66FD57E0D94'
+                    name: 'Microsoft Azure Cloud Fundamentals',
+                    description: 'Domine Azure e prepare-se para certificações que abrem portas globais.',
+                    url: 'https://www.dio.me/bootcamp/microsoft-certification-challenge-1-ai-102?ref=AFILIADOS66FD57E0D94'
                 },
                 {
-                    name: 'Coding The Future Philips - Fullstack Developer',
-                    url: 'https://web.dio.me/track/coding-future-philips-fullstack-developer?ref=AFILIADOS66FD57E0D94'
+                    name: 'AWS Cloud Fundamentals',
+                    description: 'Fundamentos da computação em nuvem com AWS e boas práticas.',
+                    url: 'https://www.dio.me/bootcamp/aws-cloud-fundamentals?ref=AFILIADOS66FD57E0D94'
                 }
             ]
         },
@@ -240,15 +377,17 @@ function generateAllTrilhasContent() {
             icon: '🧠',
             title: 'IA e Dados',
             subtitle: 'Transformando Informação em Conhecimento',
-            description: 'Descubra o mundo da Inteligência Artificial, Machine Learning e análise de dados.',
+            description: 'Aprenda a coletar, analisar e visualizar dados. Descubra o poder da Inteligência Artificial Generativa e construa o futuro.',
             bootcamps: [
                 {
-                    name: 'Coding The Future Squadio - IA Generativa para Devs',
-                    url: 'https://web.dio.me/track/coding-future-squadio-ia-generativa-para-devs?ref=AFILIADOS66FD57E0D94'
+                    name: 'Randstad - Análise de Dados com Power BI',
+                    description: 'Construa insights que ajudam a tomar decisões inteligentes.',
+                    url: 'https://www.dio.me/bootcamp/randstad-analise-de-dados-com-power-bi?ref=AFILIADOS66FD57E0D94'
                 },
                 {
-                    name: 'Microsoft Copilot AI',
-                    url: 'https://web.dio.me/track/microsoft-copilot-ai?ref=AFILIADOS66FD57E0D94'
+                    name: 'Nexa - IA Generativa com Bedrock',
+                    description: 'Descubra o poder da IA Generativa em soluções inovadoras.',
+                    url: 'https://www.dio.me/bootcamp/nexa-fundamentos-de-ia-generativa-com-bedrock?ref=AFILIADOS66FD57E0D94'
                 }
             ]
         },
@@ -256,15 +395,17 @@ function generateAllTrilhasContent() {
             icon: '🧩',
             title: 'Carreiras Tech',
             subtitle: 'Do Zero ao Primeiro Emprego',
-            description: 'Trilhas completas para quem está começando e quer garantir a primeira vaga.',
+            description: 'Comece do zero e construa uma base sólida. Lógica de programação, Git/GitHub, HTML, CSS e JavaScript para descobrir sua vocação.',
             bootcamps: [
                 {
-                    name: 'Potência Tech iFood - Desenvolvimento de Jogos',
-                    url: 'https://web.dio.me/track/potencia-tech-ifood-desenvolvimento-de-jogos?ref=AFILIADOS66FD57E0D94'
+                    name: 'Potência Tech Start',
+                    description: 'Base sólida em programação para abrir portas em qualquer trilha futura.',
+                    url: 'https://www.dio.me/bootcamp/potencia-tech-start?ref=AFILIADOS66FD57E0D94'
                 },
                 {
-                    name: 'GFT - Desenvolvimento Java com Cloud AWS',
-                    url: 'https://web.dio.me/track/gft-desenvolvimento-java-com-cloud-aws?ref=AFILIADOS66FD57E0D94'
+                    name: 'MRV Tech - Primeiros Passos',
+                    description: 'Fundamentos de programação, algoritmos e lógica essenciais.',
+                    url: 'https://www.dio.me/bootcamp/mrv-tech-primeiros-passos-na-programacao?ref=AFILIADOS66FD57E0D94'
                 }
             ]
         },
@@ -272,15 +413,17 @@ function generateAllTrilhasContent() {
             icon: '🎮',
             title: 'Game Development',
             subtitle: 'Transformando Ideias em Jogos',
-            description: 'Aprenda a criar jogos incríveis do zero, da programação ao design de gameplay.',
+            description: 'Crie jogos interativos e dinâmicos. Aprenda Unity, C#, game design e todo o processo de criação desde storytelling até deploy.',
             bootcamps: [
                 {
-                    name: 'Coding The Future Philips - Fullstack Developer',
-                    url: 'https://web.dio.me/track/coding-future-philips-fullstack-developer?ref=AFILIADOS66FD57E0D94'
+                    name: 'DIO - Desenvolvimento de Games com Unity',
+                    description: 'Desenvolva jogos com Unity e C#, dominando lógica e design.',
+                    url: 'https://www.dio.me/bootcamp/desenvolvimento-de-games-com-unity?ref=AFILIADOS66FD57E0D94'
                 },
                 {
-                    name: 'Microsoft AI for Tech',
-                    url: 'https://web.dio.me/track/microsoft-ai-for-tech?ref=AFILIADOS66FD57E0D94'
+                    name: 'GameLab - Game Design e Programação',
+                    description: 'Processo completo de criação: design, storytelling e programação.',
+                    url: 'https://www.dio.me/bootcamp/gamelab-game-design-e-programacao?ref=AFILIADOS66FD57E0D94'
                 }
             ]
         }
@@ -307,10 +450,13 @@ function generateAllTrilhasContent() {
                     </h4>
                     ${trilha.bootcamps.map((bootcamp, bIndex) => `
                         <div style="background: white; padding: 15px; margin-bottom: 12px; border-radius: 8px; border-left: 4px solid #8b5cf6;">
-                            <p style="margin: 0; font-weight: bold; color: #1e293b; margin-bottom: 5px;">
+                            <p style="margin: 0 0 8px 0; font-weight: bold; color: #1e293b; font-size: 15px;">
                                 ${bIndex + 1}. ${bootcamp.name}
                             </p>
-                            <p style="margin: 0; font-size: 13px; color: #64748b; word-break: break-all;">
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #64748b; line-height: 1.5;">
+                                ${bootcamp.description}
+                            </p>
+                            <p style="margin: 0; font-size: 12px; color: #8b5cf6; word-break: break-all;">
                                 🔗 ${bootcamp.url}
                             </p>
                         </div>
