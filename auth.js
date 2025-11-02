@@ -5,6 +5,7 @@
 // Chave para armazenar usuários no localStorage
 const USERS_KEY = 'ebook_users';
 const CURRENT_USER_KEY = 'current_user';
+const MAX_PORTFOLIO_SLOTS = 30; // Limite de 30 portfólios gratuitos
 
 // ============================================
 // FUNÇÕES DE AUTENTICAÇÃO
@@ -50,13 +51,19 @@ async function register(name, email, password) {
             };
         }
 
+        // Verificar vagas disponíveis para portfólio
+        const portfolioSlot = users.length + 1;
+        const isEligibleForPortfolio = portfolioSlot <= MAX_PORTFOLIO_SLOTS;
+
         // Criar novo usuário
         const newUser = {
             id: Date.now().toString(),
             name: name,
             email: email,
             password: hashPassword(password), // Simples hash para segurança básica
-            createdAt: new Date().toISOString()
+            createdAt: new Date().toISOString(),
+            registrationOrder: portfolioSlot, // Ordem de matrícula
+            eligibleForPortfolio: isEligibleForPortfolio // Elegível para portfólio gratuito
         };
 
         // Adicionar usuário
@@ -68,11 +75,15 @@ async function register(name, email, password) {
 
         return {
             success: true,
-            message: 'Conta criada com sucesso!',
+            message: isEligibleForPortfolio 
+                ? `🎉 Parabéns! Você garantiu a vaga #${portfolioSlot} para o portfólio profissional gratuito!`
+                : 'Conta criada com sucesso! As 30 vagas para portfólio gratuito já foram preenchidas, mas você pode consultar pelo WhatsApp.',
             user: {
                 id: newUser.id,
                 name: newUser.name,
-                email: newUser.email
+                email: newUser.email,
+                registrationOrder: newUser.registrationOrder,
+                eligibleForPortfolio: newUser.eligibleForPortfolio
             }
         };
 
