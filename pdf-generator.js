@@ -66,31 +66,99 @@ function createPDFContent() {
     `;
 
     content.innerHTML = `
-        <!-- Capa com Foto -->
-        <div style="text-align: center; padding: 40px 0; page-break-after: always;">
-            <div style="margin-bottom: 30px;">
-                <img src="assets/foto-marcio-gil.jpg" alt="Márcio Gil" style="width: 180px; height: 180px; border-radius: 50%; border: 5px solid #8b5cf6; object-fit: cover; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);">
+        <!-- Capa Principal -->
+        <div style="text-align: center; padding: 60px 20px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: -20px; color: white; page-break-after: always;">
+            <div style="margin-bottom: 40px;">
+                <img src="assets/foto-marcio-gil.jpg" alt="Márcio Gil" style="width: 200px; height: 200px; border-radius: 50%; border: 6px solid white; object-fit: cover; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
             </div>
-            <div style="font-size: 52px; margin-bottom: 15px;">🚀</div>
-            <h1 style="font-size: 38px; color: #8b5cf6; margin: 15px 0; line-height: 1.2;">
-                Trilhas da Transformação Tech
+            <div style="font-size: 72px; margin-bottom: 20px;">🚀</div>
+            <h1 style="font-size: 48px; color: white; margin: 20px 0; line-height: 1.2; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                TRILHAS DA<br>TRANSFORMAÇÃO TECH
             </h1>
-            <p style="font-size: 18px; color: #64748b; margin: 10px 0;">
-                Descubra sua Trilha Tech e Transforme sua Carreira
+            <p style="font-size: 22px; color: #f0f9ff; margin: 20px 0; font-weight: 500;">
+                Seu Guia Completo para uma Carreira de Sucesso na Tecnologia
             </p>
-            <div style="margin-top: 30px; padding: 18px; background: #f8fafc; border-radius: 10px;">
-                <p style="font-size: 16px; margin: 5px 0;"><strong>Por:</strong> Márcio Gil</p>
-                <p style="font-size: 15px; margin: 5px 0; color: #8b5cf6;">🌟 Embaixador DIO Campus Expert</p>
-                <p style="font-size: 14px; margin: 5px 0; color: #64748b;">🎓 Estudante de Engenharia de Software</p>
+            <div style="margin-top: 50px; padding: 25px; background: rgba(255, 255, 255, 0.15); border-radius: 15px; backdrop-filter: blur(10px);">
+                <p style="font-size: 18px; margin: 8px 0; color: white;"><strong>Criado por:</strong> Márcio Gil</p>
+                <p style="font-size: 16px; margin: 8px 0; color: #fef3c7;">🌟 Embaixador DIO Campus Expert</p>
+                <p style="font-size: 15px; margin: 8px 0; color: #f0f9ff;">🎓 Estudante de Engenharia de Software</p>
             </div>
-            <div style="margin-top: 30px; padding: 15px; background: #ede9fe; border-radius: 10px;">
-                <p style="font-size: 15px; margin: 5px 0;"><strong>E-book personalizado para:</strong></p>
-                <p style="font-size: 17px; margin: 5px 0; color: #8b5cf6;">${userName}</p>
+            <div style="margin-top: 40px; padding: 20px; background: rgba(255, 255, 255, 0.2); border-radius: 12px;">
+                <p style="font-size: 16px; margin: 5px 0; color: white;"><strong>E-book personalizado para:</strong></p>
+                <p style="font-size: 24px; margin: 10px 0; color: #fef3c7; font-weight: bold;">${userName}</p>
             </div>
+            <p style="font-size: 14px; margin-top: 50px; color: #f0f9ff; opacity: 0.9;">
+                © 2025 - Educação Gratuita e de Qualidade para Todos
+            </p>
+        </div>
+
+        <!-- Mensagem de Boas-Vindas -->
+        <div style="page-break-before: always; padding: 40px 20px; page-break-after: always;">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div style="font-size: 72px; margin-bottom: 20px;">👋</div>
+                <h2 style="color: #8b5cf6; font-size: 36px; margin: 15px 0;">
+                    Olá, ${userName}!
+                </h2>
+                <p style="font-size: 18px; color: #64748b; margin: 10px 0;">
+                    Seja muito bem-vindo(a) à sua jornada de transformação!
+                </p>
+            </div>
+
+            <p style="font-size: 17px; margin-bottom: 20px; line-height: 1.9; text-align: justify;">
+                É uma honra ter você aqui. Este não é apenas mais um e-book sobre tecnologia. Este é o <strong>início da sua história de transformação profissional</strong>.
+            </p>
+
+            <p style="font-size: 17px; margin-bottom: 20px; line-height: 1.9; text-align: justify;">
+                Eu sou <strong>Márcio Gil</strong>, Embaixador DIO Campus Expert e estudante apaixonado por tecnologia, educação e justiça social. Criei este material com muito carinho porque acredito que <strong>educação de qualidade deve estar ao alcance de todos</strong>.
+            </p>
+
+            <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 30px; border-radius: 15px; margin: 30px 0; border-left: 6px solid #f59e0b;">
+                <h3 style="color: #92400e; margin-top: 0; font-size: 22px; text-align: center;">✨ Por Que Este E-book Existe?</h3>
+                <p style="font-size: 16px; line-height: 1.8; color: #78350f; margin: 15px 0; text-align: justify;">
+                    Quando comecei minha jornada na tecnologia, me senti perdido diante de tantas opções, termos técnicos e caminhos possíveis. Faltava um <strong>mapa claro</strong> que me mostrasse por onde começar.
+                </p>
+                <p style="font-size: 16px; line-height: 1.8; color: #78350f; margin: 15px 0; text-align: justify;">
+                    Este e-book é o mapa que eu gostaria de ter tido. Ele reúne <strong>14 bootcamps gratuitos e de alta qualidade</strong>, organizados em 6 trilhas de aprendizado, com dicas práticas e conselhos de quem está vivendo essa jornada.
+                </p>
+            </div>
+
+            <p style="font-size: 17px; margin-bottom: 20px; line-height: 1.9; text-align: justify;">
+                Mais do que listar cursos, meu objetivo é <strong>inspirar você a dar o primeiro passo</strong> e mostrar que a transformação é possível, independente da sua origem, formação ou situação atual.
+            </p>
+
+            <div style="background: #ede9fe; padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <h3 style="color: #6d28d9; margin-top: 0; font-size: 20px; text-align: center;">📚 O Que Você Vai Encontrar Aqui:</h3>
+                <ul style="margin: 15px 0; padding-left: 30px; line-height: 2; font-size: 16px;">
+                    <li><strong>7 páginas educacionais</strong> sobre bootcamps e carreira tech</li>
+                    <li><strong>6 trilhas completas</strong> de aprendizado (Front-End, Back-End, Cloud, IA, Carreiras e Games)</li>
+                    <li><strong>14 bootcamps gratuitos</strong> com links diretos e código de indicação</li>
+                    <li><strong>Dicas práticas</strong> de como se destacar e conseguir sua primeira vaga</li>
+                    <li><strong>Histórias reais</strong> de pessoas que transformaram suas vidas</li>
+                    <li><strong>Ferramentas essenciais</strong> para começar como desenvolvedor</li>
+                    <li><strong>Mentalidade de crescimento</strong> para superar desafios</li>
+                </ul>
+            </div>
+
+            <p style="font-size: 17px; margin-bottom: 20px; line-height: 1.9; text-align: justify;">
+                Este conteúdo foi feito para ser <strong>lido, estudado e aplicado</strong>. Não apenas folheado. Reserve um tempo para absorver cada página, refletir sobre suas escolhas e traçar seu plano de ação.
+            </p>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; margin: 30px 0; text-align: center;">
+                <p style="font-size: 20px; margin: 0; font-weight: bold; line-height: 1.7;">
+                    "A tecnologia transformou minha vida.<br>Agora, quero ajudar a transformar a sua."
+                </p>
+                <p style="font-size: 16px; margin-top: 15px; opacity: 0.95;">
+                    — Márcio Gil
+                </p>
+            </div>
+
+            <p style="font-size: 17px; margin-bottom: 0; line-height: 1.9; text-align: center; font-weight: 600; color: #8b5cf6;">
+                Sua jornada começa agora. Vire a página e descubra o que é possível! 🚀
+            </p>
         </div>
 
         <!-- Página 1: O que é um Bootcamp? -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🎓</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -129,7 +197,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 2: A Revolução da Educação Tech -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🚀</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -179,7 +247,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 3: Oportunidades Reais de Carreira -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">💼</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -228,7 +296,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 4: Como Funciona o Aprendizado Imersivo -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🎯</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -278,7 +346,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 5: As Trilhas da Tecnologia -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🗺️</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -319,7 +387,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 6: O Valor das Soft Skills -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">🤝</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -354,7 +422,7 @@ function createPDFContent() {
         </div>
 
         <!-- Página 7: Como Se Destacar nos Bootcamps -->
-        <div style="page-break-after: always; padding: 40px 20px;">
+        <div style="page-break-before: always; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
                 <div style="font-size: 64px; margin-bottom: 15px;">⭐</div>
                 <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
@@ -856,10 +924,390 @@ function createPDFContent() {
 }
 
 /**
- * Gera o conteúdo de todas as trilhas
+ * Gera o conteúdo de todas as trilhas - VERSÃO EDUCACIONAL
+ * Foca em conteúdo educativo, não em listagem de bootcamps
  */
 function generateAllTrilhasContent() {
-    const trilhas = [
+    return `
+        <!-- Capítulo: Entendendo as Trilhas Tech -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">🗺️</div>
+                <h2 style="color: #8b5cf6; font-size: 36px; margin: 15px 0;">
+                    Capítulo 8: As Trilhas da Tecnologia
+                </h2>
+                <p style="font-size: 18px; color: #64748b; margin: 10px 0;">
+                    Um Guia Completo Para Escolher Seu Caminho
+                </p>
+            </div>
+
+            <p style="font-size: 17px; margin-bottom: 20px; line-height: 1.9; text-align: justify;">
+                A tecnologia é um campo vasto, e cada área tem suas próprias características, desafios e recompensas. Neste capítulo, vamos explorar profundamente as <strong>6 principais trilhas</strong> da tecnologia moderna e o que cada uma oferece.
+            </p>
+
+            <div style="background: #ede9fe; padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <h3 style="color: #6d28d9; margin-top: 0; font-size: 22px; text-align: center;">🎯 Como Este Capítulo Está Organizado:</h3>
+                <p style="font-size: 16px; line-height: 1.8; text-align: center; margin: 15px 0;">
+                    Para cada trilha, você encontrará:
+                </p>
+                <ul style="text-align: left; margin: 15px 0; padding-left: 40px; line-height: 1.9; font-size: 15px;">
+                    <li><strong>O que faz um profissional dessa área</strong> no dia a dia</li>
+                    <li><strong>Tecnologias e linguagens</strong> que você vai dominar</li>
+                    <li><strong>Perfil ideal</strong> de quem se dá bem nessa trilha</li>
+                    <li><strong>Mercado de trabalho</strong> e oportunidades de carreira</li>
+                    <li><strong>Primeiros passos</strong> práticos para começar</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Front-End Development -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="background: linear-gradient(135deg, #f97316 0%, #fb923c 100%); padding: 30px; border-radius: 15px; margin: -20px -20px 30px -20px; color: white;">
+                <div style="font-size: 48px; text-align: center; margin-bottom: 15px;">💻</div>
+                <h2 style="color: white; font-size: 32px; margin: 10px 0; text-align: center;">
+                    Trilha 1: Front-End Development
+                </h2>
+                <p style="font-size: 18px; text-align: center; margin: 10px 0; opacity: 0.95;">
+                    Criando Experiências Digitais Incríveis
+                </p>
+            </div>
+
+            <h3 style="color: #ea580c; font-size: 22px; margin: 25px 0 15px 0;">🎨 O Que Faz um Desenvolvedor Front-End?</h3>
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                O desenvolvedor front-end é o <strong>arquiteto das experiências visuais</strong> na web. Ele transforma designs em código funcionional, cria interfaces interativas e garante que o usuário tenha uma experiência fluida e agradável. Cada botão que você clica, cada animação que você vê, cada formulário que você preenche - foi um dev front-end que construiu.
+            </p>
+
+            <div style="background: #fff7ed; padding: 20px; border-radius: 10px; margin: 25px 0;">
+                <h4 style="color: #ea580c; margin-top: 0; font-size: 18px;">🛠️ Stack Tecnológica:</h4>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.9; font-size: 15px;">
+                    <li><strong>HTML5:</strong> Estrutura e semântica das páginas</li>
+                    <li><strong>CSS3:</strong> Estilização, layouts responsivos e animações</li>
+                    <li><strong>JavaScript:</strong> Interatividade e lógica no navegador</li>
+                    <li><strong>React/Angular/Vue:</strong> Frameworks modernos para SPAs</li>
+                    <li><strong>TypeScript:</strong> JavaScript com superpoderes de tipagem</li>
+                    <li><strong>Sass/Tailwind:</strong> Ferramentas para CSS profissional</li>
+                    <li><strong>Git/GitHub:</strong> Controle de versão colaborativo</li>
+                </ul>
+            </div>
+
+            <h4 style="color: #ea580c; font-size: 20px; margin: 25px 0 15px 0;">👤 Perfil Ideal:</h4>
+            <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                Você tem olhar atento para detalhes visuais? Gosta de ver resultados imediatos do seu trabalho? Tem paciência para ajustar pixels até ficar perfeito? Se interessa por design, UX/UI e experiência do usuário? Então front-end pode ser sua área!
+            </p>
+
+            <div style="background: #f0fdf4; padding: 20px; border-left: 5px solid #22c55e; margin: 25px 0; border-radius: 5px;">
+                <h4 style="color: #16a34a; margin-top: 0; font-size: 18px;">💰 Mercado e Salários:</h4>
+                <p style="font-size: 15px; line-height: 1.7; margin: 10px 0;">
+                    <strong>Júnior:</strong> R$ 3.500 - R$ 5.500/mês<br>
+                    <strong>Pleno:</strong> R$ 6.000 - R$ 10.000/mês<br>
+                    <strong>Sênior:</strong> R$ 12.000 - R$ 20.000+/mês
+                </p>
+                <p style="font-size: 14px; margin: 10px 0; color: #065f46;">
+                    💡 Demanda alta e crescente, especialmente para React e TypeScript
+                </p>
+            </div>
+
+            <h4 style="color: #ea580c; font-size: 20px; margin: 25px 0 15px 0;">🎯 Primeiros Passos:</h4>
+            <ol style="margin: 10px 0; padding-left: 25px; line-height: 1.9; font-size: 15px;">
+                <li>Domine HTML e CSS (30 dias de prática intensa)</li>
+                <li>Aprenda JavaScript do básico ao avançado</li>
+                <li>Construa 5 projetos estáticos antes de frameworks</li>
+                <li>Escolha um framework (React é mais demandado)</li>
+                <li>Monte um portfólio com projetos responsivos</li>
+            </ol>
+        </div>
+
+        <!-- Back-End Development -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%); padding: 30px; border-radius: 15px; margin: -20px -20px 30px -20px; color: white;">
+                <div style="font-size: 48px; text-align: center; margin-bottom: 15px;">⚙️</div>
+                <h2 style="color: white; font-size: 32px; margin: 10px 0; text-align: center;">
+                    Trilha 2: Back-End Development
+                </h2>
+                <p style="font-size: 18px; text-align: center; margin: 10px 0; opacity: 0.95;">
+                    O Cérebro Por Trás das Aplicações
+                </p>
+            </div>
+
+            <h3 style="color: #0891b2; font-size: 22px; margin: 25px 0 15px 0;">🔧 O Que Faz um Desenvolvedor Back-End?</h3>
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                O desenvolvedor back-end trabalha nos <strong>bastidores da aplicação</strong>. Ele constrói APIs, gerencia bancos de dados, implementa lógica de negócio complexa, garante segurança e escalabilidade. Quando você faz login, paga uma compra ou busca informações, é o back-end que processa tudo.
+            </p>
+
+            <div style="background: #ecfeff; padding: 20px; border-radius: 10px; margin: 25px 0;">
+                <h4 style="color: #0891b2; margin-top: 0; font-size: 18px;">🛠️ Stack Tecnológica:</h4>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.9; font-size: 15px;">
+                    <li><strong>Python:</strong> Simples, versátil e muito demandado</li>
+                    <li><strong>Java:</strong> Robusto, usado em grandes empresas</li>
+                    <li><strong>Node.js:</strong> JavaScript no servidor</li>
+                    <li><strong>Spring Boot:</strong> Framework enterprise Java</li>
+                    <li><strong>Django/Flask:</strong> Frameworks Python para web</li>
+                    <li><strong>SQL/NoSQL:</strong> Bancos de dados relacionais e não-relacionais</li>
+                    <li><strong>APIs REST:</strong> Comunicação entre sistemas</li>
+                    <li><strong>Docker:</strong> Containerização de aplicações</li>
+                </ul>
+            </div>
+
+            <h4 style="color: #0891b2; font-size: 20px; margin: 25px 0 15px 0;">👤 Perfil Ideal:</h4>
+            <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                Você gosta de resolver problemas de lógica? Se interessa por como as coisas funcionam por trás das cortinas? Tem paciência para debugar códigos complexos? Gosta de otimizar performance e arquitetura? Back-end é para você!
+            </p>
+
+            <div style="background: #fef3c7; padding: 20px; border-left: 5px solid #f59e0b; margin: 25px 0; border-radius: 5px;">
+                <h4 style="color: #d97706; margin-top: 0; font-size: 18px;">💰 Mercado e Salários:</h4>
+                <p style="font-size: 15px; line-height: 1.7; margin: 10px 0;">
+                    <strong>Júnior:</strong> R$ 4.000 - R$ 6.000/mês<br>
+                    <strong>Pleno:</strong> R$ 7.000 - R$ 12.000/mês<br>
+                    <strong>Sênior:</strong> R$ 14.000 - R$ 25.000+/mês
+                </p>
+                <p style="font-size: 14px; margin: 10px 0; color: #78350f;">
+                    💡 Demanda altíssima, principalmente Java e Python
+                </p>
+            </div>
+
+            <h4 style="color: #0891b2; font-size: 20px; margin: 25px 0 15px 0;">🎯 Primeiros Passos:</h4>
+            <ol style="margin: 10px 0; padding-left: 25px; line-height: 1.9; font-size: 15px;">
+                <li>Escolha uma linguagem (Python é mais fácil para iniciantes)</li>
+                <li>Aprenda lógica de programação e estruturas de dados</li>
+                <li>Estude bancos de dados SQL (PostgreSQL ou MySQL)</li>
+                <li>Construa APIs REST simples</li>
+                <li>Aprenda sobre autenticação e segurança</li>
+                <li>Crie projetos full-stack completos</li>
+            </ol>
+        </div>
+
+        <!-- Cloud Computing -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%); padding: 30px; border-radius: 15px; margin: -20px -20px 30px -20px; color: white;">
+                <div style="font-size: 48px; text-align: center; margin-bottom: 15px;">☁️</div>
+                <h2 style="color: white; font-size: 32px; margin: 10px 0; text-align: center;">
+                    Trilha 3: Cloud Computing
+                </h2>
+                <p style="font-size: 18px; text-align: center; margin: 10px 0; opacity: 0.95;">
+                    Construindo o Futuro na Nuvem
+                </p>
+            </div>
+
+            <h3 style="color: #0284c7; font-size: 22px; margin: 25px 0 15px 0;">☁️ O Que Faz um Profissional de Cloud?</h3>
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                O especialista em cloud é responsável por <strong>arquitetar, implementar e gerenciar infraestruturas na nuvem</strong>. Ele garante que aplicações sejam escaláveis, seguras, disponíveis e eficientes em custo. Com empresas migrando massivamente para a nuvem, essa é uma das áreas mais aquecidas.
+            </p>
+
+            <div style="background: #f0f9ff; padding: 20px; border-radius: 10px; margin: 25px 0;">
+                <h4 style="color: #0284c7; margin-top: 0; font-size: 18px;">🛠️ Stack Tecnológica:</h4>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.9; font-size: 15px;">
+                    <li><strong>AWS:</strong> Líder global em cloud computing</li>
+                    <li><strong>Azure:</strong> Plataforma Microsoft com forte presença corporativa</li>
+                    <li><strong>GCP:</strong> Google Cloud Platform</li>
+                    <li><strong>Kubernetes:</strong> Orquestração de containers</li>
+                    <li><strong>Terraform:</strong> Infraestrutura como código (IaC)</li>
+                    <li><strong>CI/CD:</strong> Automação de deploy e integração</li>
+                    <li><strong>Monitoramento:</strong> CloudWatch, Prometheus, Grafana</li>
+                </ul>
+            </div>
+
+            <h4 style="color: #0284c7; font-size: 20px; margin: 25px 0 15px 0;">👤 Perfil Ideal:</h4>
+            <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                Você gosta de entender sistemas complexos? Tem interesse em arquitetura de software? Gosta de automatizar processos? Se interessa por DevOps, segurança e escalabilidade? Cloud pode ser seu caminho!
+            </p>
+
+            <div style="background: #f0fdf4; padding: 20px; border-left: 5px solid #22c55e; margin: 25px 0; border-radius: 5px;">
+                <h4 style="color: #16a34a; margin-top: 0; font-size: 18px;">💰 Mercado e Salários:</h4>
+                <p style="font-size: 15px; line-height: 1.7; margin: 10px 0;">
+                    <strong>Júnior:</strong> R$ 5.000 - R$ 7.500/mês<br>
+                    <strong>Pleno:</strong> R$ 9.000 - R$ 15.000/mês<br>
+                    <strong>Sênior:</strong> R$ 16.000 - R$ 30.000+/mês
+                </p>
+                <p style="font-size: 14px; margin: 10px 0; color: #065f46;">
+                    💡 Área com déficit de profissionais qualificados
+                </p>
+            </div>
+
+            <h4 style="color: #0284c7; font-size: 20px; margin: 25px 0 15px 0;">🎯 Primeiros Passos:</h4>
+            <ol style="margin: 10px 0; padding-left: 25px; line-height: 1.9; font-size: 15px;">
+                <li>Aprenda fundamentos de redes e sistemas operacionais</li>
+                <li>Crie conta gratuita na AWS ou Azure</li>
+                <li>Estude para certificações (AWS Cloud Practitioner)</li>
+                <li>Pratique com projetos reais na nuvem</li>
+                <li>Aprenda Docker e Kubernetes</li>
+            </ol>
+        </div>
+
+        <!-- IA e Dados -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); padding: 30px; border-radius: 15px; margin: -20px -20px 30px -20px; color: white;">
+                <div style="font-size: 48px; text-align: center; margin-bottom: 15px;">🤖</div>
+                <h2 style="color: white; font-size: 32px; margin: 10px 0; text-align: center;">
+                    Trilha 4: IA e Ciência de Dados
+                </h2>
+                <p style="font-size: 18px; text-align: center; margin: 10px 0; opacity: 0.95;">
+                    Transformando Dados em Inteligência
+                </p>
+            </div>
+
+            <h3 style="color: #7c3aed; font-size: 22px; margin: 25px 0 15px 0;">🧠 O Que Faz um Profissional de IA/Dados?</h3>
+            <p style="font-size: 16px; margin-bottom: 18px; line-height: 1.8; text-align: justify;">
+                Profissionais de IA e Dados <strong>transformam informações brutas em insights acionáveis</strong>. Eles criam modelos de machine learning, analisam padrões, fazem previsões e automatizam decisões. Com a explosão de IA generativa, essa área está revolucionando todos os setores.
+            </p>
+
+            <div style="background: #faf5ff; padding: 20px; border-radius: 10px; margin: 25px 0;">
+                <h4 style="color: #7c3aed; margin-top: 0; font-size: 18px;">🛠️ Stack Tecnológica:</h4>
+                <ul style="margin: 10px 0; padding-left: 25px; line-height: 1.9; font-size: 15px;">
+                    <li><strong>Python:</strong> Linguagem dominante em IA e dados</li>
+                    <li><strong>Pandas/NumPy:</strong> Manipulação e análise de dados</li>
+                    <li><strong>Scikit-learn:</strong> Machine learning clássico</li>
+                    <li><strong>TensorFlow/PyTorch:</strong> Deep learning</li>
+                    <li><strong>Power BI/Tableau:</strong> Visualização de dados</li>
+                    <li><strong>SQL:</strong> Consultas em bancos de dados</li>
+                    <li><strong>APIs de IA:</strong> OpenAI, Hugging Face, etc.</li>
+                </ul>
+            </div>
+
+            <h4 style="color: #7c3aed; font-size: 20px; margin: 25px 0 15px 0;">👤 Perfil Ideal:</h4>
+            <p style="font-size: 15px; margin-bottom: 15px; line-height: 1.8; text-align: justify;">
+                Você gosta de matemática e estatística? Tem curiosidade por padrões e previsões? Gosta de resolver problemas complexos com dados? Se interessa por IA, machine learning e futuro da tecnologia? Essa é sua área!
+            </p>
+
+            <div style="background: #fef3c7; padding: 20px; border-left: 5px solid #f59e0b; margin: 25px 0; border-radius: 5px;">
+                <h4 style="color: #d97706; margin-top: 0; font-size: 18px;">💰 Mercado e Salários:</h4>
+                <p style="font-size: 15px; line-height: 1.7; margin: 10px 0;">
+                    <strong>Júnior:</strong> R$ 5.500 - R$ 8.000/mês<br>
+                    <strong>Pleno:</strong> R$ 10.000 - R$ 16.000/mês<br>
+                    <strong>Sênior:</strong> R$ 18.000 - R$ 35.000+/mês
+                </p>
+                <p style="font-size: 14px; margin: 10px 0; color: #78350f;">
+                    💡 Área em explosão com IA generativa (ChatGPT, etc.)
+                </p>
+            </div>
+
+            <h4 style="color: #7c3aed; font-size: 20px; margin: 25px 0 15px 0;">🎯 Primeiros Passos:</h4>
+            <ol style="margin: 10px 0; padding-left: 25px; line-height: 1.9; font-size: 15px;">
+                <li>Aprenda Python focado em análise de dados</li>
+                <li>Estude estatística e matemática básica</li>
+                <li>Domine Pandas e visualização de dados</li>
+                <li>Aprenda conceitos de machine learning</li>
+                <li>Construa projetos com datasets reais (Kaggle)</li>
+                <li>Explore APIs de IA generativa</li>
+            </ol>
+        </div>
+
+        <!-- Resumo das Trilhas -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">📊</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    Comparativo Rápido das Trilhas
+                </h2>
+            </div>
+
+            <div style="background: #f8fafc; padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <h3 style="color: #1e293b; margin-top: 0; font-size: 20px; text-align: center;">Qual Trilha Escolher?</h3>
+                
+                <div style="margin: 20px 0; line-height: 2; font-size: 15px;">
+                    <p style="margin: 15px 0;">
+                        <strong style="color: #ea580c;">🎨 Escolha Front-End se:</strong> Você gosta de visual, design, ver resultados imediatos
+                    </p>
+                    <p style="margin: 15px 0;">
+                        <strong style="color: #0891b2;">⚙️ Escolha Back-End se:</strong> Você prefere lógica, algoritmos, arquitetura de sistemas
+                    </p>
+                    <p style="margin: 15px 0;">
+                        <strong style="color: #0284c7;">☁️ Escolha Cloud se:</strong> Você gosta de infraestrutura, DevOps, escalabilidade
+                    </p>
+                    <p style="margin: 15px 0;">
+                        <strong style="color: #7c3aed;">🤖 Escolha IA/Dados se:</strong> Você ama matemática, estatística, IA e análise
+                    </p>
+                    <p style="margin: 15px 0;">
+                        <strong style="color: #16a34a;">💼 Escolha Carreiras se:</strong> Você está começando do zero e quer base sólida
+                    </p>
+                    <p style="margin: 15px 0;">
+                        <strong style="color: #dc2626;">🎮 Escolha Games se:</strong> Sua paixão é criar jogos e experiências interativas
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; margin: 30px 0;">
+                <h3 style="margin-top: 0; font-size: 22px; text-align: center; color: white;">💡 Dica Final Sobre Escolha de Trilha</h3>
+                <p style="font-size: 16px; line-height: 1.8; text-align: justify; margin: 15px 0;">
+                    Não existe trilha "melhor" ou "pior". Todas têm demanda forte e salários atrativos. O mais importante é escolher aquela que <strong>alinha com seu perfil e interesses</strong>. A paixão pelo que você faz te levará mais longe que qualquer outro fator.
+                </p>
+                <p style="font-size: 16px; line-height: 1.8; text-align: justify; margin: 15px 0;">
+                    E lembre-se: você pode (e provavelmente vai) transitar entre trilhas ao longo da carreira. Muitos desenvolvedores full-stack dominam front e back. Profissionais de cloud precisam saber programação. Cientistas de dados trabalham com back-end. As trilhas se complementam!
+                </p>
+            </div>
+
+            <p style="font-size: 17px; margin-top: 30px; line-height: 1.9; text-align: center; font-weight: 600; color: #8b5cf6;">
+                O importante é começar. Escolha uma trilha e dê o primeiro passo hoje! 🚀
+            </p>
+        </div>
+
+        <!-- Onde Encontrar os Bootcamps -->
+        <div style="page-break-before: always; padding: 40px 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 64px; margin-bottom: 15px;">🎯</div>
+                <h2 style="color: #8b5cf6; font-size: 32px; margin: 15px 0;">
+                    Onde Encontrar os 14 Bootcamps Gratuitos
+                </h2>
+            </div>
+
+            <p style="font-size: 17px; margin-bottom: 20px; line-height: 1.9; text-align: justify;">
+                Agora que você conhece profundamente cada trilha e sabe qual combina mais com você, é hora de <strong>colocar em prática</strong>!
+            </p>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 35px; border-radius: 15px; color: white; margin: 30px 0; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 24px; margin-bottom: 20px;">🌐 Acesse a Landing Page</h3>
+                <p style="font-size: 18px; margin: 15px 0; line-height: 1.8;">
+                    Todos os <strong>14 bootcamps gratuitos</strong> estão organizados por trilha na nossa landing page interativa!
+                </p>
+                <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; margin-top: 25px;">
+                    <p style="font-size: 16px; margin: 10px 0;">
+                        👉 <strong>Faça login na plataforma</strong>
+                    </p>
+                    <p style="font-size: 16px; margin: 10px 0;">
+                        👉 <strong>Escolha sua trilha favorita</strong>
+                    </p>
+                    <p style="font-size: 16px; margin: 10px 0;">
+                        👉 <strong>Clique nos bootcamps</strong>
+                    </p>
+                    <p style="font-size: 16px; margin: 10px 0;">
+                        👉 <strong>Inscreva-se gratuitamente com código de indicação já incluído!</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: #f0fdf4; padding: 25px; border-radius: 12px; margin: 30px 0;">
+                <h3 style="color: #16a34a; margin-top: 0; font-size: 22px; text-align: center;">📚 Bootcamps Disponíveis Por Trilha:</h3>
+                <div style="margin: 20px 0;">
+                    <p style="font-size: 16px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #ea580c;">💻 Front-End:</strong> 2 bootcamps - Santander Angular, Potência Tech React
+                    </p>
+                    <p style="font-size: 16px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #0891b2;">⚙️ Back-End:</strong> 4 bootcamps - GFT Java, Potência Tech Python, Bradesco QA, LuizaLabs Python
+                    </p>
+                    <p style="font-size: 16px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #0284c7;">☁️ Cloud:</strong> 2 bootcamps - Microsoft Azure AI-102, AWS Fundamentals
+                    </p>
+                    <p style="font-size: 16px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #7c3aed;">🤖 IA/Dados:</strong> 2 bootcamps - Randstad Power BI, Nexa IA Generativa
+                    </p>
+                    <p style="font-size: 16px; margin-bottom: 15px; line-height: 1.7;">
+                        <strong style="color: #16a34a;">💼 Carreiras:</strong> 2 bootcamps - Potência Tech Start, MRV Primeiros Passos
+                    </p>
+                    <p style="font-size: 16px; margin-bottom: 0; line-height: 1.7;">
+                        <strong style="color: #dc2626;">🎮 Games:</strong> 2 bootcamps - DIO Unity, GameLab Design
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: #fef3c7; padding: 25px; border-left: 5px solid #f59e0b; margin: 30px 0; border-radius: 8px;">
+                <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #78350f;">
+                    <strong>💡 Importante:</strong> Todos os links na landing page já incluem o código de indicação automaticamente. Os bootcamps são 100% gratuitos e reconhecidos no mercado. Basta clicar e se inscrever!
+                </p>
+            </div>
+        </div>
+    `;
+}
+
+/**
         {
             icon: '💻',
             title: 'Front-End',
@@ -1063,3 +1511,5 @@ function hidePDFLoading() {
         loading.remove();
     }
 }
+
+
