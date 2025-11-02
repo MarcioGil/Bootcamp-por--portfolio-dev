@@ -8,6 +8,8 @@
     <title>Trilhas da Transformação Tech | E-book DIO</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="accessibility.css">
+    <link rel="stylesheet" href="premium-styles.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -141,9 +143,9 @@
                     <p class="trilha-description">
                         Domine HTML, CSS, JavaScript, Angular e React criando interfaces modernas e responsivas.
                     </p>
-                    <div style="text-align: center; padding: 20px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; margin-top: 15px;">
-                        <p style="margin: 0; color: #8b5cf6; font-weight: 600;">🔒 2 Bootcamps Disponíveis</p>
-                        <a href="login.html" class="btn btn-primary" style="margin-top: 10px; display: inline-block;">Fazer Login para Ver</a>
+                    <div class="lock-badge">
+                        <p>🔒 2 Bootcamps Disponíveis</p>
+                        <a href="login.html" class="btn btn-primary">Fazer Login para Ver</a>
                     </div>
                 </div>
 
@@ -157,9 +159,9 @@
                     <p class="trilha-description">
                         Desenvolva sistemas robustos com Java, Python, Spring Boot e APIs REST.
                     </p>
-                    <div style="text-align: center; padding: 20px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; margin-top: 15px;">
-                        <p style="margin: 0; color: #8b5cf6; font-weight: 600;">🔒 2 Bootcamps Disponíveis</p>
-                        <a href="login.html" class="btn btn-primary" style="margin-top: 10px; display: inline-block;">Fazer Login para Ver</a>
+                    <div class="lock-badge">
+                        <p>🔒 2 Bootcamps Disponíveis</p>
+                        <a href="login.html" class="btn btn-primary">Fazer Login para Ver</a>
                     </div>
                 </div>
 
@@ -173,9 +175,9 @@
                     <p class="trilha-description">
                         Construa soluções escaláveis com Azure e AWS e prepare-se para certificações globais.
                     </p>
-                    <div style="text-align: center; padding: 20px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; margin-top: 15px;">
-                        <p style="margin: 0; color: #8b5cf6; font-weight: 600;">🔒 2 Bootcamps Disponíveis</p>
-                        <a href="login.html" class="btn btn-primary" style="margin-top: 10px; display: inline-block;">Fazer Login para Ver</a>
+                    <div class="lock-badge">
+                        <p>🔒 2 Bootcamps Disponíveis</p>
+                        <a href="login.html" class="btn btn-primary">Fazer Login para Ver</a>
                     </div>
                 </div>
 
@@ -189,9 +191,9 @@
                     <p class="trilha-description">
                         Aprenda análise de dados, Power BI e o poder da Inteligência Artificial Generativa.
                     </p>
-                    <div style="text-align: center; padding: 20px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; margin-top: 15px;">
-                        <p style="margin: 0; color: #8b5cf6; font-weight: 600;">🔒 2 Bootcamps Disponíveis</p>
-                        <a href="login.html" class="btn btn-primary" style="margin-top: 10px; display: inline-block;">Fazer Login para Ver</a>
+                    <div class="lock-badge">
+                        <p>🔒 2 Bootcamps Disponíveis</p>
+                        <a href="login.html" class="btn btn-primary">Fazer Login para Ver</a>
                     </div>
                 </div>
 
@@ -205,9 +207,9 @@
                     <p class="trilha-description">
                         Comece do zero com lógica de programação, Git/GitHub, HTML, CSS e JavaScript.
                     </p>
-                    <div style="text-align: center; padding: 20px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; margin-top: 15px;">
-                        <p style="margin: 0; color: #8b5cf6; font-weight: 600;">🔒 2 Bootcamps Disponíveis</p>
-                        <a href="login.html" class="btn btn-primary" style="margin-top: 10px; display: inline-block;">Fazer Login para Ver</a>
+                    <div class="lock-badge">
+                        <p>🔒 2 Bootcamps Disponíveis</p>
+                        <a href="login.html" class="btn btn-primary">Fazer Login para Ver</a>
                     </div>
                 </div>
 
@@ -221,8 +223,10 @@
                     <p class="trilha-description">
                         Crie jogos com Unity, C#, game design e todo o processo de criação.
                     </p>
-                    <div style="text-align: center; padding: 20px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; margin-top: 15px;">
-                        <p style="margin: 0; color: #8b5cf6; font-weight: 600;">🔒 2 Bootcamps Disponíveis</p>
+                    <div class="lock-badge">
+                        <p>🔒 2 Bootcamps Disponíveis</p>
+                        <a href="login.html" class="btn btn-primary">Fazer Login para Ver</a>
+                    </div>
                         <a href="login.html" class="btn btn-primary" style="margin-top: 10px; display: inline-block;">Fazer Login para Ver</a>
                     </div>
                 </div>
@@ -505,7 +509,7 @@
                         <li>✅ 100% gratuito</li>
                     </ul>
                     
-                    <button onclick="downloadEbookPDF()" class="btn btn-primary" style="width: 100%; padding: 20px; font-size: 18px; margin-top: 20px;">
+                    <button id="downloadPdfBtn" onclick="downloadEbookPDF()" class="btn btn-primary">
                         <span>📥</span> Baixar E-book em PDF
                     </button>
                     

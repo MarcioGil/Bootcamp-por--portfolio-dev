@@ -1,0 +1,339 @@
+/* ============================================
+   ANIMAÇÕES AVANÇADAS E EFEITOS VISUAIS
+   ============================================ */
+
+/* Animação de entrada gradual para cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.trilha-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: calc(var(--card-index, 0) * 0.1s);
+    opacity: 0;
+}
+
+.trilha-card:nth-child(1) { --card-index: 1; }
+.trilha-card:nth-child(2) { --card-index: 2; }
+.trilha-card:nth-child(3) { --card-index: 3; }
+.trilha-card:nth-child(4) { --card-index: 4; }
+.trilha-card:nth-child(5) { --card-index: 5; }
+.trilha-card:nth-child(6) { --card-index: 6; }
+
+/* Efeito de partículas de fundo */
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-20px) translateX(10px); }
+    50% { transform: translateY(-10px) translateX(-10px); }
+    75% { transform: translateY(-15px) translateX(5px); }
+}
+
+.hero::before,
+.download-section::before {
+    animation: float 20s ease-in-out infinite;
+}
+
+/* Efeito de texto gradiente animado */
+@keyframes gradient-text {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-title,
+.section-title {
+    background: linear-gradient(90deg, #8b5cf6, #06b6d4, #8b5cf6);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-text 3s ease infinite;
+}
+
+/* Efeito de brilho pulsante */
+@keyframes pulse-glow-soft {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+    }
+}
+
+.lock-badge:hover {
+    animation: pulse-glow-soft 2s ease-in-out infinite;
+}
+
+/* Animação de loading no botão de PDF */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading #downloadPdfBtn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* Efeito de digitação no hero */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-subtitle::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    margin-left: 3px;
+}
+
+/* Animação de hover nos ícones */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.trilha-icon:hover {
+    animation: bounce 0.6s ease;
+}
+
+/* Efeito de ondas no hero background */
+@keyframes wave {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z' fill='%238b5cf6' fill-opacity='0.1'/%3E%3C/svg%3E") repeat-x;
+    animation: wave 15s linear infinite;
+    opacity: 0.3;
+}
+
+/* Animação de entrada do login */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.login-container {
+    animation: slideIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Efeito de sucesso/erro nas mensagens */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.error-message {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes checkmark {
+    0% {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+.success-message::before {
+    content: '✓';
+    display: inline-block;
+    margin-right: 8px;
+    animation: checkmark 0.5s ease-out;
+}
+
+/* Efeito de progresso no formulário */
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.form-group.focused::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+    animation: progress 0.3s ease-out forwards;
+}
+
+/* Animação de estrelas no fundo */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, rgba(139, 92, 246, 0.5), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(6, 182, 212, 0.5), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(139, 92, 246, 0.3), transparent),
+        radial-gradient(1px 1px at 80% 10%, rgba(6, 182, 212, 0.3), transparent),
+        radial-gradient(2px 2px at 10% 80%, rgba(139, 92, 246, 0.4), transparent);
+    background-size: 200% 200%;
+    animation: twinkle 5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Efeito de hover nos bootcamp-items */
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(8px);
+    }
+}
+
+.bootcamp-item:hover {
+    animation: slideRight 0.3s ease-out forwards;
+}
+
+/* Efeito de zoom suave nas imagens */
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+img:hover {
+    animation: zoomIn 0.3s ease-out forwards;
+}
+
+/* Efeito de ripple nos botões */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Transição suave entre seções */
+.trilhas-preview,
+.trilhas-completas {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.trilhas-preview.hiding {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.trilhas-completas.showing {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Efeito de scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animação de loading overlay */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.pdf-loading-overlay {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Efeito parallax suave */
+@media (prefers-reduced-motion: no-preference) {
+    .hero,
+    .download-section {
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+/* Desabilitar animações para usuários que preferem */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

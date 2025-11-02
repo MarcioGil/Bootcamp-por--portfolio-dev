@@ -1,0 +1,408 @@
+/* ============================================
+   ESTILOS PREMIUM - MELHORIAS VISUAIS
+   ============================================ */
+
+/* Animações suaves globais */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Preview das trilhas - Mais atrativo */
+.trilhas-preview .trilha-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.trilhas-preview .trilha-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.trilhas-preview .trilha-card:hover::before {
+    opacity: 1;
+}
+
+.trilhas-preview .trilha-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(139, 92, 246, 0.3);
+}
+
+/* Ícones das trilhas com animação */
+.trilha-icon {
+    display: inline-block;
+    font-size: 3rem;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.trilha-card:hover .trilha-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Badge de bloqueio mais bonito */
+.lock-badge {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.lock-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.lock-badge p {
+    margin: 0 0 15px 0;
+    color: #a78bfa;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.lock-badge .btn {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+.lock-badge .btn:hover {
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.6);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Cards completos - Design premium */
+.trilhas-completas .trilha-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.trilhas-completas .trilha-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #8b5cf6, #06b6d4, #8b5cf6);
+    background-size: 400% 400%;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    animation: gradient-rotate 3s ease infinite;
+    transition: opacity 0.3s ease;
+}
+
+.trilhas-completas .trilha-card:hover::after {
+    opacity: 1;
+}
+
+@keyframes gradient-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Bootcamp items - Mais elegantes */
+.bootcamp-item {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.bootcamp-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #8b5cf6 0%, #06b6d4 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.bootcamp-item:hover::before {
+    transform: scaleY(1);
+}
+
+.bootcamp-item:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+    border-color: rgba(139, 92, 246, 0.5);
+    transform: translateX(8px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.bootcamp-item h4 {
+    color: #e0e7ff;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.bootcamp-item p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Link dos bootcamps - Mais chamativo */
+.bootcamp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.bootcamp-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.bootcamp-link:hover::before {
+    left: 100%;
+}
+
+.bootcamp-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+}
+
+.bootcamp-link::after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.bootcamp-link:hover::after {
+    transform: translateX(5px);
+}
+
+/* Botão de download do PDF - Extra especial */
+#downloadPdfBtn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(240, 147, 251, 0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#downloadPdfBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+#downloadPdfBtn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+#downloadPdfBtn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(240, 147, 251, 0.6);
+}
+
+/* Seção de download - Mais impactante */
+.download-section {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Título das seções - Mais elegante */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8b5cf6 0%, #06b6d4 100%);
+    border-radius: 2px;
+}
+
+/* Login page - Mais moderna */
+.login-container {
+    backdrop-filter: blur(10px);
+    background: rgba(30, 41, 59, 0.8);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.form-input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.submit-btn:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+/* Números e estatísticas - Destaque */
+.stats-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Badges e tags */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #a78bfa;
+}
+
+/* Efeito de hover global nos botões */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Responsivo premium */
+@media (max-width: 768px) {
+    .trilha-icon {
+        font-size: 2.5rem;
+    }
+    
+    .lock-badge {
+        padding: 20px;
+    }
+    
+    #downloadPdfBtn {
+        padding: 18px 35px;
+        font-size: 1rem;
+    }
+}
